@@ -1,0 +1,10 @@
+# Copy to databases.yml, then edit to suit your database environment
+
+all:
+  doctrine:
+    class:        sfDoctrineDatabase
+    param:
+      dsn:        mysql:dbname=cmstest;host=localhost
+      username: root
+      password: root
+      
