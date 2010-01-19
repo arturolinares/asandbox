@@ -19,7 +19,7 @@
  * @method aSlot               setValue()            Sets the current record's "value" value
  * @method aSlot               setAreaVersionSlots() Sets the current record's "AreaVersionSlots" collection
  * 
- * @package    cmstest
+ * @package    asandbox
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $
@@ -57,6 +57,30 @@ abstract class BaseaSlot extends sfDoctrineRecord
              'aRawHTMLSlot' => 
              array(
               'type' => 'aRawHTML',
+             ),
+             'aImageSlot' => 
+             array(
+              'type' => 'aImage',
+             ),
+             'aButtonSlot' => 
+             array(
+              'type' => 'aButton',
+             ),
+             'aSlideshowSlot' => 
+             array(
+              'type' => 'aSlideshow',
+             ),
+             'aVideoSlot' => 
+             array(
+              'type' => 'aVideo',
+             ),
+             'aMediaBrowserSlot' => 
+             array(
+              'type' => 'aMediaBrowser',
+             ),
+             'aPDFSlot' => 
+             array(
+              'type' => 'aPDF',
              ),
              ));
     }

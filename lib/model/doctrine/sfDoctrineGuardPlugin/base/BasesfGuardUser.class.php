@@ -18,6 +18,7 @@
  * @property Doctrine_Collection $aPage
  * @property Doctrine_Collection $aAreaVersion
  * @property Doctrine_Collection $Accesses
+ * @property Doctrine_Collection $MediaItems
  * @property Doctrine_Collection $sfGuardUserPermission
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
@@ -35,6 +36,7 @@
  * @method Doctrine_Collection getAPage()                 Returns the current record's "aPage" collection
  * @method Doctrine_Collection getAAreaVersion()          Returns the current record's "aAreaVersion" collection
  * @method Doctrine_Collection getAccesses()              Returns the current record's "Accesses" collection
+ * @method Doctrine_Collection getMediaItems()            Returns the current record's "MediaItems" collection
  * @method Doctrine_Collection getSfGuardUserPermission() Returns the current record's "sfGuardUserPermission" collection
  * @method Doctrine_Collection getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
  * @method sfGuardRememberKey  getRememberKeys()          Returns the current record's "RememberKeys" value
@@ -51,11 +53,12 @@
  * @method sfGuardUser         setAPage()                 Sets the current record's "aPage" collection
  * @method sfGuardUser         setAAreaVersion()          Sets the current record's "aAreaVersion" collection
  * @method sfGuardUser         setAccesses()              Sets the current record's "Accesses" collection
+ * @method sfGuardUser         setMediaItems()            Sets the current record's "MediaItems" collection
  * @method sfGuardUser         setSfGuardUserPermission() Sets the current record's "sfGuardUserPermission" collection
  * @method sfGuardUser         setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser         setRememberKeys()          Sets the current record's "RememberKeys" value
  * 
- * @package    cmstest
+ * @package    asandbox
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $
@@ -136,6 +139,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
         $this->hasMany('aAccess as Accesses', array(
              'local' => 'id',
              'foreign' => 'user_id'));
+
+        $this->hasMany('aMediaItem as MediaItems', array(
+             'local' => 'id',
+             'foreign' => 'owner_id'));
 
         $this->hasMany('sfGuardUserPermission', array(
              'local' => 'id',

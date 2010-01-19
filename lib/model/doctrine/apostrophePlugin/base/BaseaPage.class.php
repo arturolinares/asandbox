@@ -49,7 +49,7 @@
  * @method aPage               setAccesses()       Sets the current record's "Accesses" collection
  * @method aPage               setALuceneUpdate()  Sets the current record's "aLuceneUpdate" collection
  * 
- * @package    cmstest
+ * @package    asandbox
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $
