@@ -37,15 +37,15 @@ all:
     enabled_modules:        
       - aCleanLogin
       - a
-      - aRichText
-      - aText
-      # - aRawHTML
       - aMedia
-      - aSlideshow
-      - aVideo
-      - aImage
-      - aButton
-      - aPDF
+      - aRichTextSlot
+      - aTextSlot
+      # - aRawHTMLSlot
+      - aSlideshowSlot
+      - aVideoSlot
+      - aImageSlot
+      - aButtonSlot
+      - aPDFSlot
       - sfGuardAuth
       - aUserAdmin
       - aGroupAdmin
