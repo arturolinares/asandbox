@@ -117,3 +117,15 @@ a:hover
 	font-size: 11px;
 	color: #ccc;
 }
+
+.narrow
+{
+	width: 150px;
+}
+
+.green
+{
+	background-color: green;
+}
+
+/* But how do I make floating a slot left or right work? */

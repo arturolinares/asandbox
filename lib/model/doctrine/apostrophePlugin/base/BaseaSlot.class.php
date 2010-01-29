@@ -7,19 +7,22 @@
  * 
  * @property integer $id
  * @property string $type
+ * @property string $variant
  * @property clob $value
  * @property Doctrine_Collection $AreaVersionSlots
  * 
  * @method integer             getId()               Returns the current record's "id" value
  * @method string              getType()             Returns the current record's "type" value
+ * @method string              getVariant()          Returns the current record's "variant" value
  * @method clob                getValue()            Returns the current record's "value" value
  * @method Doctrine_Collection getAreaVersionSlots() Returns the current record's "AreaVersionSlots" collection
  * @method aSlot               setId()               Sets the current record's "id" value
  * @method aSlot               setType()             Sets the current record's "type" value
+ * @method aSlot               setVariant()          Sets the current record's "variant" value
  * @method aSlot               setValue()            Sets the current record's "value" value
  * @method aSlot               setAreaVersionSlots() Sets the current record's "AreaVersionSlots" collection
  * 
- * @package    asandbox
+ * @package    cmstest
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $
@@ -36,6 +39,10 @@ abstract class BaseaSlot extends sfDoctrineRecord
              'length' => '4',
              ));
         $this->hasColumn('type', 'string', 100, array(
+             'type' => 'string',
+             'length' => '100',
+             ));
+        $this->hasColumn('variant', 'string', 100, array(
              'type' => 'string',
              'length' => '100',
              ));

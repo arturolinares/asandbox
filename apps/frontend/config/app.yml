@@ -7,6 +7,7 @@ all:
     default_on: true
     edit_candidate_group: editor
     edit_sufficient_group: admin
+          
     slot_types:
       # aRawHTML: HTML
       aImage: Image
