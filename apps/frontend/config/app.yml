@@ -32,6 +32,7 @@ all:
     admin_credential: media_admin
     upload_credential: media_upload
     use_bundled_layout: false
+    embed_codes: true        
   aToolkit:
     indexes:
       - 'aPage'
