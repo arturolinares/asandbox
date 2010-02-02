@@ -5,7 +5,7 @@
  *
  * @method aMediaItem getObject() Returns the current form's model object
  *
- * @package    cmstest
+ * @package    asandbox
  * @subpackage form
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
@@ -30,6 +30,7 @@ abstract class BaseaMediaItemForm extends BaseFormDoctrine
       'created_at'     => new sfWidgetFormDateTime(),
       'updated_at'     => new sfWidgetFormDateTime(),
       'slug'           => new sfWidgetFormInputText(),
+      'slots_list'     => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aSlot')),
     ));
 
     $this->setValidators(array(
@@ -48,6 +49,7 @@ abstract class BaseaMediaItemForm extends BaseFormDoctrine
       'created_at'     => new sfValidatorDateTime(),
       'updated_at'     => new sfValidatorDateTime(),
       'slug'           => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'slots_list'     => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aSlot', 'required' => false)),
     ));
 
     $this->validatorSchema->setPostValidator(
@@ -66,6 +68,62 @@ abstract class BaseaMediaItemForm extends BaseFormDoctrine
   public function getModelName()
   {
     return 'aMediaItem';
+  }
+
+  public function updateDefaultsFromObject()
+  {
+    parent::updateDefaultsFromObject();
+
+    if (isset($this->widgetSchema['slots_list']))
+    {
+      $this->setDefault('slots_list', $this->object->Slots->getPrimaryKeys());
+    }
+
+  }
+
+  protected function doSave($con = null)
+  {
+    $this->saveSlotsList($con);
+
+    parent::doSave($con);
+  }
+
+  public function saveSlotsList($con = null)
+  {
+    if (!$this->isValid())
+    {
+      throw $this->getErrorSchema();
+    }
+
+    if (!isset($this->widgetSchema['slots_list']))
+    {
+      // somebody has unset this widget
+      return;
+    }
+
+    if (null === $con)
+    {
+      $con = $this->getConnection();
+    }
+
+    $existing = $this->object->Slots->getPrimaryKeys();
+    $values = $this->getValue('slots_list');
+    if (!is_array($values))
+    {
+      $values = array();
+    }
+
+    $unlink = array_diff($existing, $values);
+    if (count($unlink))
+    {
+      $this->object->unlink('Slots', array_values($unlink));
+    }
+
+    $link = array_diff($values, $existing);
+    if (count($link))
+    {
+      $this->object->link('Slots', array_values($link));
+    }
   }
 
 }
