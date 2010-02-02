@@ -15,7 +15,6 @@ abstract class BaseaPageFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'slug'           => new sfWidgetFormFilterInput(),
       'template'       => new sfWidgetFormFilterInput(),
-      'is_published'   => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'view_is_secure' => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'archived'       => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'author_id'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Author'), 'add_empty' => true)),
@@ -31,7 +30,6 @@ abstract class BaseaPageFormFilter extends BaseFormFilterDoctrine
     $this->setValidators(array(
       'slug'           => new sfValidatorPass(array('required' => false)),
       'template'       => new sfValidatorPass(array('required' => false)),
-      'is_published'   => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
       'view_is_secure' => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
       'archived'       => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
       'author_id'      => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Author'), 'column' => 'id')),
@@ -64,7 +62,6 @@ abstract class BaseaPageFormFilter extends BaseFormFilterDoctrine
       'id'             => 'Number',
       'slug'           => 'Text',
       'template'       => 'Text',
-      'is_published'   => 'Boolean',
       'view_is_secure' => 'Boolean',
       'archived'       => 'Boolean',
       'author_id'      => 'ForeignKey',

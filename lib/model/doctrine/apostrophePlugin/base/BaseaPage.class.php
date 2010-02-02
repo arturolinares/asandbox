@@ -8,7 +8,6 @@
  * @property integer $id
  * @property string $slug
  * @property string $template
- * @property boolean $is_published
  * @property boolean $view_is_secure
  * @property boolean $archived
  * @property integer $author_id
@@ -23,7 +22,6 @@
  * @method integer             getId()             Returns the current record's "id" value
  * @method string              getSlug()           Returns the current record's "slug" value
  * @method string              getTemplate()       Returns the current record's "template" value
- * @method boolean             getIsPublished()    Returns the current record's "is_published" value
  * @method boolean             getViewIsSecure()   Returns the current record's "view_is_secure" value
  * @method boolean             getArchived()       Returns the current record's "archived" value
  * @method integer             getAuthorId()       Returns the current record's "author_id" value
@@ -37,7 +35,6 @@
  * @method aPage               setId()             Sets the current record's "id" value
  * @method aPage               setSlug()           Sets the current record's "slug" value
  * @method aPage               setTemplate()       Sets the current record's "template" value
- * @method aPage               setIsPublished()    Sets the current record's "is_published" value
  * @method aPage               setViewIsSecure()   Sets the current record's "view_is_secure" value
  * @method aPage               setArchived()       Sets the current record's "archived" value
  * @method aPage               setAuthorId()       Sets the current record's "author_id" value
@@ -73,9 +70,6 @@ abstract class BaseaPage extends sfDoctrineRecord
         $this->hasColumn('template', 'string', 100, array(
              'type' => 'string',
              'length' => '100',
-             ));
-        $this->hasColumn('is_published', 'boolean', null, array(
-             'type' => 'boolean',
              ));
         $this->hasColumn('view_is_secure', 'boolean', null, array(
              'type' => 'boolean',
