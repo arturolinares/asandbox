@@ -1,5 +1,9 @@
-/* An example of reasonable styles at the application level which go well with the
-  provided sample page templates. Copy this to main.css if you wish. */
+/* aSandbox Defaul CSS */
+
+
+
+
+/* Basic Elements =========================================== */
 
 h1
 {
@@ -35,38 +39,11 @@ a:hover
 	text-decoration: underline;
 }
 
-#cmstest-wrapper
-{ /*Site Wrapper, For Layout*/
-	width: 960px;
-	margin: 0 auto;
-}
 
-#cmstest-header,
-#cmstest-content
-{
-	float: left;
-	display: inline;
-	position: relative;
-	width: 100%;
-}
 
-#cmstest-login
-{
-	float: right;
-	display: inline;
-	width: 100%;
-	clear: both;
-/*	margin-top: -20px;*/
-}
 
-#cmstest-content #a-subnav
-{
-	width: 200px;
-	margin:40px 40px 0 0;
-	float:left;
-	display:inline;
-	position:relative;
-}
+
+/* Basic Layout =========================================== */
 
 #a-area-logo
 {
@@ -75,6 +52,11 @@ a:hover
 	position: relative;
 	width: 100%;
 	clear: both;
+}
+
+#a-area-logo #a-slot-logo-1
+{
+	margin: 0;
 }
 
 #a-area-logo .aImage a
@@ -120,6 +102,70 @@ a:hover
 	font-size: 11px;
 	color: #ccc;
 }
+
+
+
+
+/* Subnav =========================================== */
+
+#a-subnav
+{
+	background: #ddd;
+}
+
+#a-subnav a
+{
+	float: left;
+	clear: both;
+	width: 155px;
+	height: 100%;
+	min-height: 20px;
+	padding: 0 20px 0 5px;
+	color: #fff;
+	display: inline;
+}
+
+#a-subnav a:hover
+{
+	color: #333;
+	background: #fff;
+	text-decoration: none;
+}
+
+
+#a-subnav li .a-drag
+{
+	position: absolute;
+	right: 0;
+}
+
+#a-subnav li .a-drag,
+#a-subnav li .a-drag *
+{
+	background-color: transparent;
+}
+
+
+/* Breadcrumb Component =========================================== */
+
+#a-breadcrumb-component
+{
+	float: left;
+	width: 100%;
+	font-size: 18px;
+	margin: 0 0 20px 0;
+}
+
+#a-breadcrumb-component li
+{
+	float: left;
+	margin-right: 5px;
+}
+
+
+
+
+/* Variants =========================================== */
 
 .narrow
 {
