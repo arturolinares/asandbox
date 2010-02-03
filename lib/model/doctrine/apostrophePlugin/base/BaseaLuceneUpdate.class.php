@@ -43,7 +43,10 @@ abstract class BaseaLuceneUpdate extends sfDoctrineRecord
               1 => 'culture',
              ),
              ));
-        $this->option('type', 'INNODB');
+        $this->option('symfony', array(
+             'form' => false,
+             'filter' => false,
+             ));
     }
 
     public function setUp()

@@ -68,7 +68,10 @@ abstract class BaseaArea extends sfDoctrineRecord
               0 => 'page_id',
              ),
              ));
-        $this->option('type', 'INNODB');
+        $this->option('symfony', array(
+             'form' => false,
+             'filter' => false,
+             ));
     }
 
     public function setUp()

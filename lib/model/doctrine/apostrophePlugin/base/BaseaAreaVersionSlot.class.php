@@ -61,7 +61,10 @@ abstract class BaseaAreaVersionSlot extends sfDoctrineRecord
               0 => 'area_version_id',
              ),
              ));
-        $this->option('type', 'INNODB');
+        $this->option('symfony', array(
+             'form' => false,
+             'filter' => false,
+             ));
     }
 
     public function setUp()

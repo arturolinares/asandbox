@@ -50,7 +50,10 @@ abstract class BaseaSlot extends sfDoctrineRecord
              'type' => 'clob',
              ));
 
-        $this->option('type', 'INNODB');
+        $this->option('symfony', array(
+             'form' => false,
+             'filter' => false,
+             ));
 
         $this->setSubClasses(array(
              'aTextSlot' => 

@@ -9,12 +9,27 @@ all:
     edit_sufficient_group: admin
           
     slot_types:
-      # aRawHTML: HTML
-      aImage: Image
-      aButton: Button
-      aPDF: PDF
-      aSlideshow: Slideshow
-      aVideo: Video
+      # The following slot types are always enabled (meaning only that you can include them in
+      # individual templates if you wish, so you still have control over what your end users do):
+      #
+      # aRichText
+      # aText
+      # aImage
+      # aSlideshow
+      # aButton
+      # aVideo
+      # aPDF
+      # aRawHTML
+      #
+      # You can enable additional slot types implemented at the application level or via
+      # plugins by adding their type names here along with a short descriptive label.
+      # 
+      # Example:
+      #
+      # baseball: "Baseball Box Score"
+      #
+      # (This assumes you have implemented such a slot type of course.)
+      
     home_as_tab: false
     templates:
       home: Home Page
