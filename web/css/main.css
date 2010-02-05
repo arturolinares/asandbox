@@ -17,9 +17,11 @@ h2
 }
 
 h3,
-h6,
-h5
+h4,
+h5,
+h6
 {
+	font-size: 14px;
 	color: #666;
 }
 
@@ -103,7 +105,11 @@ a:hover
 	color: #ccc;
 }
 
-
+#a-content
+{
+	clear: none;
+	width: 720px;
+}
 
 
 /* Subnav =========================================== */
