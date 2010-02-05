@@ -125,6 +125,9 @@ a:hover
 }
 
 
+
+
+
 /* Subnav =========================================== */
 
 #a-subnav
@@ -161,6 +164,9 @@ a:hover
 }
 
 
+
+
+
 /* Breadcrumb Component =========================================== */
 
 #a-breadcrumb-component
@@ -179,6 +185,46 @@ a:hover
 
 
 
+/* Blog & Events =========================================== */
+
+.a-blog-events #a-blog-main .a-blog-post-media
+{
+	float: left;
+	width: auto;
+	clear: none;
+	display: inline;
+	position: relative;
+	margin: 0 20px 0 0;
+}
+
+#a-blog-main .a-blog-post-media .a-slideshow-controls
+{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: rgba(255,255,255,0.35);
+	width: 100%;
+	z-index: 999;
+}
+
+#a-blog-main .a-blog-post-media .a-slideshow-controls li
+{
+	float: left;
+	padding: 5px 0;
+	margin: 0 5px;
+}
+
+#a-blog-main .a-blog-post-media .a-slideshow-controls li.a-slideshow-controls-previous
+{
+	position: absolute;
+	top: 0;
+	right: 25px;
+}
+
+#a-blog-main .a-blog-post-media .a-slideshow-controls li.a-slideshow-controls-next
+{
+	float: right;
+}
 
 /* Variants =========================================== */
 
