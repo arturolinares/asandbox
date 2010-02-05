@@ -113,7 +113,7 @@ a:hover
 	background: #ddd;
 }
 
-#a-subnav a
+#a-subnav .a-tab-nav-item a
 {
 	float: left;
 	clear: both;
@@ -121,7 +121,7 @@ a:hover
 	display: inline;
 }
 
-#a-subnav a:hover
+#a-subnav .a-tab-nav-item a:hover
 {
 	color: #333;
 	background: #fff;
