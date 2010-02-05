@@ -47,6 +47,18 @@ a:hover
 
 /* Basic Layout =========================================== */
 
+#a-header,
+#a-search
+{
+	width: auto;
+	clear: none;
+}
+
+#a-search
+{
+	float: right;
+}
+
 #a-area-logo
 {
 	float: left;
@@ -105,7 +117,8 @@ a:hover
 	color: #ccc;
 }
 
-#a-content
+.a-blog-posts #a-content,
+.a-blog-events #a-content
 {
 	clear: none;
 	width: 720px;
