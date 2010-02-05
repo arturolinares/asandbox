@@ -8,12 +8,12 @@ all:
     edit_candidate_group: editor
     edit_sufficient_group: admin
 
-    slot_variants:
-      aRichText:
-        normal:
-          label: Normal
-        narrow:
-          label: Narrow          
+    # slot_variants:
+    #   aRichText:
+    #     normal:
+    #       label: Normal
+    #     narrow:
+    #       label: Narrow          
     slot_types:
       aBlogPost: Blog Post
       aBlogEvent: Blog Event
