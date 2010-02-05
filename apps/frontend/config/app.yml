@@ -51,7 +51,7 @@ all:
       '': 'Template-Based'
       aBlog: Blog
       aCalendar: Calendar
-      aMedia: 'Media'    
+      aMedia: Media
   aMedia:
     # If not set, the same site is assumed
     # client_site: "http://www.mymediasite.com/"
