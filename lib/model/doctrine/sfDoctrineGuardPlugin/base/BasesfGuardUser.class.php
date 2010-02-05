@@ -15,6 +15,9 @@
  * @property timestamp $last_login
  * @property Doctrine_Collection $groups
  * @property Doctrine_Collection $permissions
+ * @property Doctrine_Collection $aBlogItems
+ * @property Doctrine_Collection $aBlogPosts
+ * @property Doctrine_Collection $aBlogEvents
  * @property Doctrine_Collection $aPage
  * @property Doctrine_Collection $aAreaVersion
  * @property Doctrine_Collection $Accesses
@@ -33,6 +36,9 @@
  * @method timestamp           getLastLogin()             Returns the current record's "last_login" value
  * @method Doctrine_Collection getGroups()                Returns the current record's "groups" collection
  * @method Doctrine_Collection getPermissions()           Returns the current record's "permissions" collection
+ * @method Doctrine_Collection getABlogItems()            Returns the current record's "aBlogItems" collection
+ * @method Doctrine_Collection getABlogPosts()            Returns the current record's "aBlogPosts" collection
+ * @method Doctrine_Collection getABlogEvents()           Returns the current record's "aBlogEvents" collection
  * @method Doctrine_Collection getAPage()                 Returns the current record's "aPage" collection
  * @method Doctrine_Collection getAAreaVersion()          Returns the current record's "aAreaVersion" collection
  * @method Doctrine_Collection getAccesses()              Returns the current record's "Accesses" collection
@@ -50,6 +56,9 @@
  * @method sfGuardUser         setLastLogin()             Sets the current record's "last_login" value
  * @method sfGuardUser         setGroups()                Sets the current record's "groups" collection
  * @method sfGuardUser         setPermissions()           Sets the current record's "permissions" collection
+ * @method sfGuardUser         setABlogItems()            Sets the current record's "aBlogItems" collection
+ * @method sfGuardUser         setABlogPosts()            Sets the current record's "aBlogPosts" collection
+ * @method sfGuardUser         setABlogEvents()           Sets the current record's "aBlogEvents" collection
  * @method sfGuardUser         setAPage()                 Sets the current record's "aPage" collection
  * @method sfGuardUser         setAAreaVersion()          Sets the current record's "aAreaVersion" collection
  * @method sfGuardUser         setAccesses()              Sets the current record's "Accesses" collection
@@ -127,6 +136,18 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'refClass' => 'sfGuardUserPermission',
              'local' => 'user_id',
              'foreign' => 'permission_id'));
+
+        $this->hasMany('aBlogItem as aBlogItems', array(
+             'local' => 'id',
+             'foreign' => 'author_id'));
+
+        $this->hasMany('aBlogPost as aBlogPosts', array(
+             'local' => 'id',
+             'foreign' => 'author_id'));
+
+        $this->hasMany('aBlogEvent as aBlogEvents', array(
+             'local' => 'id',
+             'foreign' => 'author_id'));
 
         $this->hasMany('aPage', array(
              'local' => 'id',

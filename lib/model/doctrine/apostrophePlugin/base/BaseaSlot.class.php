@@ -56,6 +56,22 @@ abstract class BaseaSlot extends sfDoctrineRecord
              ));
 
         $this->setSubClasses(array(
+             'aBlogPostSlot' => 
+             array(
+              'type' => 'aBlogPost',
+             ),
+             'aBlogSlot' => 
+             array(
+              'type' => 'aBlog',
+             ),
+             'aCalendarSlot' => 
+             array(
+              'type' => 'aCalendar',
+             ),
+             'aBlogEventSlot' => 
+             array(
+              'type' => 'aBlogEvent',
+             ),
              'aTextSlot' => 
              array(
               'type' => 'aText',

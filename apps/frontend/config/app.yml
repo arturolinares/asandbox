@@ -9,6 +9,10 @@ all:
     edit_sufficient_group: admin
           
     slot_types:
+      aBlogPost: Blog Post
+      aBlogEvent: Blog Event
+      aCalendar: Calendar
+      
       # The following slot types are always enabled (meaning only that you can include them in
       # individual templates if you wish, so you still have control over what your end users do):
       #
@@ -37,6 +41,11 @@ all:
       default: Default Page
     # We're using it as the sitewide layout instead (see view.yml)
     use_bundled_layout: false   
+    engines:
+      '': 'Template-Based'
+      aBlog: Blog
+      aCalendar: Calendar
+    
   aMedia:
     # If not set, the same site is assumed
     # client_site: "http://www.mymediasite.com/"
