@@ -46,7 +46,7 @@
  * @method aMediaItem  setViewIsSecure()   Sets the current record's "view_is_secure" value
  * @method aMediaItem  setOwner()          Sets the current record's "Owner" value
  * 
- * @package    cmstest
+ * @package    asandbox
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $
