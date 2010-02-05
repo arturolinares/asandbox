@@ -1,17 +1,19 @@
 # default values
 all:
   a:
-    engines:
-      '': 'Template-Based'
-      aMedia: 'Media'
-    
     # By default new slots in an area go to the top, you can change that here
     # new_slots_top: false
     routes_register: false 
     default_on: true
     edit_candidate_group: editor
     edit_sufficient_group: admin
-          
+
+    slot_variants:
+      aRichText:
+        normal:
+          label: Normal
+        narrow:
+          label: Narrow          
     slot_types:
       aBlogPost: Blog Post
       aBlogEvent: Blog Event
@@ -49,7 +51,7 @@ all:
       '': 'Template-Based'
       aBlog: Blog
       aCalendar: Calendar
-    
+      aMedia: 'Media'    
   aMedia:
     # If not set, the same site is assumed
     # client_site: "http://www.mymediasite.com/"
