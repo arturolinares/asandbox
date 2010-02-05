@@ -38,6 +38,7 @@ all:
       - aCleanLogin
       - a
       - aMedia
+      - aMediaBackend
       - aRichTextSlot
       - aTextSlot
       # - aRawHTMLSlot
@@ -52,6 +53,7 @@ all:
       - aPermissionAdmin
       - sfGuardPermission
       - taggableComplete
+      - aNavigation
       - default
 
     error_404_module:       a         # To be called when a 404 error is raised

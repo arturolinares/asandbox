@@ -53,7 +53,7 @@ information about installing netpbm and ghostscript. A few truly excellent hosti
 companies may already have these in place. If you have a Virtual Private Server
 (and you should, shared hosting is very insecure), you can most likely install
 netpbm and ghostscript with a few simple commands like `sudo apt-get install netpbm`
-and `sudo apt-get install ghotscript`.
+and `sudo apt-get install ghostscript`.
 
 If you are choosing a Linux distribution, we recommend Ubuntu. Ubuntu includes a sufficiently modern version of PHP right out of the box. If you are using Red Hat Enterprise Linux or CentOS, you will need to upgrade PHP to version 5.2.x on your own. This is unfortunate and Red Hat really ought to get a move on and fix it.
 
