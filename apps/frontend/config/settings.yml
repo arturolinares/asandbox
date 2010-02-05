@@ -39,6 +39,7 @@ all:
       - aSync
       - aNavigation
       - aMedia
+      - aMediaBackend
       - aRichTextSlot
       - aTextSlot
       - aRawHTMLSlot
@@ -53,6 +54,7 @@ all:
       - aPermissionAdmin
       - sfGuardPermission
       - taggableComplete
+      - aNavigation
       - default
       - aBlog
       - aBlogFeed

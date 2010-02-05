@@ -9,18 +9,24 @@
  * @property string $type
  * @property string $variant
  * @property clob $value
+ * @property Doctrine_Collection $MediaItems
  * @property Doctrine_Collection $AreaVersionSlots
+ * @property Doctrine_Collection $aSlotMediaItem
  * 
  * @method integer             getId()               Returns the current record's "id" value
  * @method string              getType()             Returns the current record's "type" value
  * @method string              getVariant()          Returns the current record's "variant" value
  * @method clob                getValue()            Returns the current record's "value" value
+ * @method Doctrine_Collection getMediaItems()       Returns the current record's "MediaItems" collection
  * @method Doctrine_Collection getAreaVersionSlots() Returns the current record's "AreaVersionSlots" collection
+ * @method Doctrine_Collection getASlotMediaItem()   Returns the current record's "aSlotMediaItem" collection
  * @method aSlot               setId()               Sets the current record's "id" value
  * @method aSlot               setType()             Sets the current record's "type" value
  * @method aSlot               setVariant()          Sets the current record's "variant" value
  * @method aSlot               setValue()            Sets the current record's "value" value
+ * @method aSlot               setMediaItems()       Sets the current record's "MediaItems" collection
  * @method aSlot               setAreaVersionSlots() Sets the current record's "AreaVersionSlots" collection
+ * @method aSlot               setASlotMediaItem()   Sets the current record's "aSlotMediaItem" collection
  * 
  * @package    asandbox
  * @subpackage model
@@ -114,7 +120,16 @@ abstract class BaseaSlot extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
+        $this->hasMany('aMediaItem as MediaItems', array(
+             'refClass' => 'aSlotMediaItem',
+             'local' => 'slot_id',
+             'foreign' => 'media_item_id'));
+
         $this->hasMany('aAreaVersionSlot as AreaVersionSlots', array(
+             'local' => 'id',
+             'foreign' => 'slot_id'));
+
+        $this->hasMany('aSlotMediaItem', array(
              'local' => 'id',
              'foreign' => 'slot_id'));
     }

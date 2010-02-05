@@ -1,6 +1,10 @@
 # default values
 all:
   a:
+    engines:
+      '': 'Template-Based'
+      aMedia: 'Media'
+    
     # By default new slots in an area go to the top, you can change that here
     # new_slots_top: false
     routes_register: false 
