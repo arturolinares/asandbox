@@ -47,15 +47,16 @@ a:hover
 
 /* Basic Layout =========================================== */
 
-#a-header,
-#a-search
+#a-header
 {
-	width: auto;
+	width: 540px;
 	clear: none;
 }
 
 #a-search
 {
+	width: auto;
+	clear: none;
 	float: right;
 }
 
@@ -124,7 +125,10 @@ a:hover
 	width: 720px;
 }
 
-
+.a-home #a-content
+{
+	width: 100%;
+}
 
 
 
@@ -185,6 +189,8 @@ a:hover
 
 
 
+
+
 /* Blog & Events =========================================== */
 
 .a-blog-events #a-blog-main .a-blog-post-media
@@ -210,8 +216,8 @@ a:hover
 #a-blog-main .a-blog-post-media .a-slideshow-controls li
 {
 	float: left;
-	padding: 5px 0;
-	margin: 0 5px;
+/*	padding: 5px 0;*/
+	margin: 5px;
 }
 
 #a-blog-main .a-blog-post-media .a-slideshow-controls li.a-slideshow-controls-previous
@@ -225,6 +231,10 @@ a:hover
 {
 	float: right;
 }
+
+
+
+
 
 /* Variants =========================================== */
 
