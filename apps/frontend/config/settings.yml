@@ -28,7 +28,12 @@ all:
   .settings:
     rich_text_fck_js_dir:   apostrophePlugin/js/fckeditor
     # Form security secret (CSRF protection)
-    csrf_secret:            false     # Unique secret to enable CSRF protection or false to disable
+    
+    # On a production site you should obviously change this. But having it not be false is
+    # a useful test because it means we'll hear about it if our code isn't compatible with
+    # CSRF protection
+    
+    csrf_secret:            CHANGEME     # Unique secret to enable CSRF protection or false to disable
 
     # Output escaping settings
     escaping_strategy:      false            # Determines how variables are made available to templates. Accepted values: on, off.
