@@ -9,11 +9,12 @@ all:
     edit_sufficient_group: admin
 
     # slot_variants:
-    #   aRichText:
+    #   aButton:
     #     normal:
     #       label: Normal
-    #     narrow:
-    #       label: Narrow          
+    #     useTitleAsButtonText:
+    #       label: Text Over
+              
     slot_types:
       aBlogPost: Blog Post
       aBlogEvent: Blog Event
