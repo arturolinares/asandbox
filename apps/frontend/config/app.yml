@@ -8,12 +8,12 @@ all:
     edit_candidate_group: editor
     edit_sufficient_group: admin
 
-    # slot_variants:
-    #   aButton:
-    #     normal:
-    #       label: Normal
-    #     useTitleAsButtonText:
-    #       label: Text Over
+    slot_variants:
+      aButton:
+        normal:
+          label: Normal
+        useTitleAsButtonText:
+          label: Text Over
               
     slot_types:
       aBlogPost: Blog Post
