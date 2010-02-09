@@ -5,6 +5,13 @@ all:
     # new_slots_top: false
     routes_register: false 
     default_on: true
+    # Make sure you specify the candidate and sufficient groups for both managing
+    # (that is, deleting and creating) and editing pages. It's typical to use the same
+    # group of candidates for editors and managers, because you can still assign actual
+    # managing and editing privileges for any individual page and its descendants via the
+    # page settings dialog even if the pool of candidates is all one group
+    manage_candidate_group: editor
+    manage_sufficient_group: admin
     edit_candidate_group: editor
     edit_sufficient_group: admin
 
