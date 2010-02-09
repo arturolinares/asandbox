@@ -237,15 +237,3 @@ a:hover
 
 
 /* Variants =========================================== */
-
-.narrow
-{
-	width: 150px;
-}
-
-.green
-{
-	background-color: green;
-}
-
-/* But how do I make floating a slot left or right work? */
