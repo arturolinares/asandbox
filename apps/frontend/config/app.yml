@@ -21,7 +21,12 @@ all:
           label: Normal
         useTitleAsButtonText:
           label: Text Over
-              
+      aRichText:
+        normal:
+          label: Normal
+        extraWide:
+          label: Extra Wide
+          
     slot_types:
       aBlogPost: Blog Post
       aBlogEvent: Blog Event
