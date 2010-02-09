@@ -7,18 +7,8 @@ all:
     default_on: true
     edit_candidate_group: editor
     edit_sufficient_group: admin
-
-    slot_variants:
-      aButton:
-        normal:
-          label: Normal
-        useTitleAsButtonText:
-          label: Text Over
               
     slot_types:
-      aBlogPost: Blog Post
-      aBlogEvent: Blog Event
-      aCalendar: Calendar
       
       # The following slot types are always enabled (meaning only that you can include them in
       # individual templates if you wish, so you still have control over what your end users do):
@@ -50,8 +40,6 @@ all:
     use_bundled_layout: false   
     engines:
       '': 'Template-Based'
-      aBlog: Blog
-      aCalendar: Calendar
       aMedia: Media
   aMedia:
     # If not set, the same site is assumed
@@ -70,15 +58,7 @@ all:
     indexes:
       - 'aPage'
       - 'aMediaItem'
-      
-  aBlog:
-    post_list_slideshow_width: 720
-    post_list_slideshow_height: 220   
-    
-  aCalendar:
-    event_list_slideshow_width: 180
-    event_list_slideshow_height: 160   
-  
+        
   # options for sfSyncContentPlugin, used to sync the database and also
   # data files such as the media plugin's images and the search indexes. 
   # You can extend this if you have more data file folders
@@ -88,7 +68,7 @@ all:
     content:
       # Almost always
       - "web/uploads"
-      # If you use P'unk Avenue stuff
+      # If you use Apostrophe
       - "data/a_writable"
         
   # For us this is the right place to find the netpbm utilities and ghostscript 
@@ -99,9 +79,3 @@ all:
   aimageconverter:
     path: /opt/local/bin
 
-  # You need to set this to your site's hostname to use a:refresh to update
-  # URLs in media slots etc
-  
-#  cli:
-#    host: cmstest14
-    

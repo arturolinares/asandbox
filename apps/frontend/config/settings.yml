@@ -61,17 +61,6 @@ all:
       - taggableComplete
       - aNavigation
       - default
-      - aBlog
-      - aBlogFeed
-      - aBlogPostAdmin
-      - aBlogEventAdmin
-      - aBlogCategoryAdmin
-      - aBlog
-      - aBlogEventSlot
-      - aBlogPostSlot
-      - aBlogEventSlot      
-      - aCalendarSlot
-      - aCalendar
       - aAdmin
 
     error_404_module:       a         # To be called when a 404 error is raised

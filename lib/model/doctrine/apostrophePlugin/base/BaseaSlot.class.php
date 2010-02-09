@@ -28,7 +28,7 @@
  * @method aSlot               setAreaVersionSlots() Sets the current record's "AreaVersionSlots" collection
  * @method aSlot               setASlotMediaItem()   Sets the current record's "aSlotMediaItem" collection
  * 
- * @package    asandbox
+ * @package    demo
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $
@@ -62,22 +62,6 @@ abstract class BaseaSlot extends sfDoctrineRecord
              ));
 
         $this->setSubClasses(array(
-             'aBlogPostSlot' => 
-             array(
-              'type' => 'aBlogPost',
-             ),
-             'aBlogSlot' => 
-             array(
-              'type' => 'aBlog',
-             ),
-             'aCalendarSlot' => 
-             array(
-              'type' => 'aCalendar',
-             ),
-             'aBlogEventSlot' => 
-             array(
-              'type' => 'aBlogEvent',
-             ),
              'aTextSlot' => 
              array(
               'type' => 'aText',
