@@ -8,4 +8,3 @@
 # Separate version on the server allows both prod and dev to be tested locally with the
 # local one. Neither version is checked into svn for security reasons since this is a public repo
 /config/databases.yml
-

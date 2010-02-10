@@ -60,7 +60,7 @@ a:hover
 	float: right;
 }
 
-#a-area-logo
+.a-area-logo
 {
 	float: left;
 	display: inline;
@@ -69,25 +69,25 @@ a:hover
 	clear: both;
 }
 
-#a-area-logo #a-slot-logo-1
+.a-area-logo .a-slot
 {
 	margin: 0;
 }
 
-#a-area-logo .aImage a
+.a-area-logo .aImage a
 {
 	float: left;
 	display: inline;
 	position: relative;
 }
 
-#a-area-header
+.a-area-header
 {
 	float: left;
 	width: 50%;
 }
 
-#a-area-body
+.a-area-body
 {
 	width:480px;
 	float:left;
@@ -95,12 +95,12 @@ a:hover
 	position:relative;
 }
 
-.a-home #a-area-body
+.a-home .a-area-body
 {
 	width: 720px;
 }
 
-#a-area-sidebar
+.a-area-sidebar
 {
 	width:200px;
 	float:left;
@@ -109,7 +109,7 @@ a:hover
 	margin-left: 40px;
 }
 
-#a-area-footer
+.a-area-footer
 {
 	border-top: 1px solid #ccc;
 	padding-top: 10px;
@@ -237,15 +237,3 @@ a:hover
 
 
 /* Variants =========================================== */
-
-.narrow
-{
-	width: 150px;
-}
-
-.green
-{
-	background-color: green;
-}
-
-/* But how do I make floating a slot left or right work? */
