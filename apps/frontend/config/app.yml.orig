@@ -53,12 +53,6 @@ all:
       #
       # (This assumes you have implemented such a slot type of course.)
       
-    slot_variants:
-      aRichText:
-        normal:
-          label: Normal
-        extraWide:
-          label: Extra Wide
 
     home_as_tab: false
     templates:
