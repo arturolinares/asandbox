@@ -5,6 +5,7 @@ all:
     # new_slots_top: false
     routes_register: false 
     default_on: true
+
     # Make sure you specify the candidate and sufficient groups for both managing
     # (that is, deleting and creating) and editing pages. It's typical to use the same
     # group of candidates for editors and managers, because you can still assign actual
@@ -25,18 +26,6 @@ all:
     
     # Message displayed next to button if client tries to click
     # max_page_limit_message: Cannot create a child page here.
-
-    slot_variants:
-      aButton:
-        normal:
-          label: Normal
-        useTitleAsButtonText:
-          label: Text Over
-      aRichText:
-        normal:
-          label: Normal
-        extraWide:
-          label: Extra Wide
           
     slot_types:
       aBlogPost: Blog Post
@@ -64,7 +53,32 @@ all:
       #
       # (This assumes you have implemented such a slot type of course.)
       
+    slot_variants:
+      aButton:
+        normal:
+          label: Normal
+        useTitleAsButtonText:
+          label: Text Over
+      aSlideshow:
+        normal:
+          label: Normal
+        compact:
+          label: Compact
+        autoplay:
+          label: Auto Play
+          options:
+            interval: 4
+            arrows: false          
+      aFeed:
+        text-only:
+          label: Text Only
+        show-images:
+          label: Show Images 
+          options:
+            markup: '<b><i><strong><em><p><br><ul><ol><li><img>'
+            
     home_as_tab: false
+
     templates:
       home: Home Page
       default: Default Page
