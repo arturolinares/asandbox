@@ -62,22 +62,22 @@ all:
       aSlideshow:
         normal:
           label: Normal
+          options:
+            interval: 0
+						title: false
+            arrows: true
         compact:
           label: Compact
           options:
+	          interval: 0
             title: true
+	          arrows: true
         autoplay:
           label: Auto Play
           options:
             interval: 4
+						title: true
             arrows: false         
-      aFeed:
-        text-only:
-          label: Text Only
-        show-images:
-          label: Show Images 
-          options:
-            markup: '<b><i><strong><em><p><br><ul><ol><li><img>'
             
     home_as_tab: false
 
