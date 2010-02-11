@@ -14,12 +14,7 @@ all:
     manage_sufficient_group: admin
     edit_candidate_group: editor
     edit_sufficient_group: admin
-      aRichText:
-        normal:
-          label: Normal
-        extraWide:
-          label: Extra Wide
-          
+    
     slot_types:
       
       # The following slot types are always enabled (meaning only that you can include them in
@@ -43,6 +38,12 @@ all:
       #
       # (This assumes you have implemented such a slot type of course.)
       
+    slot_variants:
+      aRichText:
+        normal:
+          label: Normal
+        extraWide:
+          label: Extra Wide
 
     home_as_tab: false
     templates:

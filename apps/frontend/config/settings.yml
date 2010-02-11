@@ -53,6 +53,7 @@ all:
       - aImageSlot
       - aButtonSlot
       - aPDFSlot
+      - aFeedSlot
       - sfGuardAuth
       - aUserAdmin
       - aGroupAdmin
