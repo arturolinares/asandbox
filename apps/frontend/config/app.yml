@@ -15,6 +15,17 @@ all:
     edit_candidate_group: editor
     edit_sufficient_group: admin
 
+    # Sets the level of CMS Pages allowed to be created by the client 
+    # (e.g. page_level: 1 means the site can only have pages that are 
+    # peers to the homepage peers A.K.A. top navigation pages)
+    # max_page_levels: 3  
+
+    # Maximum number of child pages allowed to be created at any given level
+    # max_children_per_page: 8 
+    
+    # Message displayed next to button if client tries to click
+    # max_page_limit_message: Cannot create a child page here.
+
     slot_variants:
       aButton:
         normal:
@@ -53,13 +64,6 @@ all:
       #
       # (This assumes you have implemented such a slot type of course.)
       
-    slot_variants:
-      aRichText:
-        normal:
-          label: Normal
-        extraWide:
-          label: Extra Wide
-
     home_as_tab: false
     templates:
       home: Home Page
@@ -90,10 +94,12 @@ all:
       - 'aMediaItem'
       
   aBlog:
+    # Dimensions for media slideshows on Blog IndexSuccess
     post_list_slideshow_width: 720
     post_list_slideshow_height: 220   
     
   aCalendar:
+    # Dimensions for media slideshows on Calendar IndexSuccess    
     event_list_slideshow_width: 180
     event_list_slideshow_height: 160   
   
