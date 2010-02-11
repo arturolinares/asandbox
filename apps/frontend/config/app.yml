@@ -64,11 +64,13 @@ all:
           label: Normal
         compact:
           label: Compact
+          options:
+            title: true
         autoplay:
           label: Auto Play
           options:
             interval: 4
-            arrows: false          
+            arrows: false         
       aFeed:
         text-only:
           label: Text Only
