@@ -64,19 +64,19 @@ all:
           label: Normal
           options:
             interval: 0
-						title: false
+            title: false
             arrows: true
         compact:
           label: Compact
           options:
-	          interval: 0
+            interval: 0
             title: true
-	          arrows: true
+            arrows: true
         autoplay:
           label: Auto Play
           options:
             interval: 4
-						title: true
+            title: true
             arrows: false         
             
     home_as_tab: false
