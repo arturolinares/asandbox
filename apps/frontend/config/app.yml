@@ -39,12 +39,31 @@ all:
       # (This assumes you have implemented such a slot type of course.)
       
     slot_variants:
-      aRichText:
+      aButton:
         normal:
           label: Normal
-        extraWide:
-          label: Extra Wide
-
+        useTitleAsButtonText:
+          label: Text Over
+      aSlideshow:
+        normal:
+          label: Normal
+          options:
+            interval: 0
+            title: false
+            arrows: true
+        compact:
+          label: Compact
+          options:
+            interval: 0
+            title: true
+            arrows: true
+        autoplay:
+          label: Auto Play
+          options:
+            interval: 4
+            title: true
+            arrows: false
+            
     home_as_tab: false
     templates:
       home: Home Page
