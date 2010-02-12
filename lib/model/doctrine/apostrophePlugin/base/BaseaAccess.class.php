@@ -22,7 +22,7 @@
  * @method aAccess     setUser()      Sets the current record's "User" value
  * @method aAccess     setPage()      Sets the current record's "Page" value
  * 
- * @package    demo
+ * @package    content
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $

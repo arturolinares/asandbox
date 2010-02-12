@@ -58,7 +58,7 @@
  * @method aMediaItem          setMediaCategories()    Sets the current record's "MediaCategories" collection
  * @method aMediaItem          setAMediaItemCategory() Sets the current record's "aMediaItemCategory" collection
  * 
- * @package    demo
+ * @package    content
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $

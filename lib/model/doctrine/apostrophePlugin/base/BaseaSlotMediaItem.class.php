@@ -19,7 +19,7 @@
  * @method aSlotMediaItem setAMediaItem()    Sets the current record's "aMediaItem" value
  * @method aSlotMediaItem setASlot()         Sets the current record's "aSlot" value
  * 
- * @package    demo
+ * @package    content
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $

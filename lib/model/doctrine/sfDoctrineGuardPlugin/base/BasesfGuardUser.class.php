@@ -58,7 +58,7 @@
  * @method sfGuardUser         setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser         setRememberKeys()          Sets the current record's "RememberKeys" value
  * 
- * @package    demo
+ * @package    content
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $

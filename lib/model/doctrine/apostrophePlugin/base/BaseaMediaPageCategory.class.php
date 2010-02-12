@@ -19,7 +19,7 @@
  * @method aMediaPageCategory setAMediaCategory()    Sets the current record's "aMediaCategory" value
  * @method aMediaPageCategory setAPage()             Sets the current record's "aPage" value
  * 
- * @package    demo
+ * @package    content
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $
