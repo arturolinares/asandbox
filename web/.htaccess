@@ -32,3 +32,12 @@ Options +FollowSymLinks +ExecCGI
   # no, so we redirect to our front web controller
   RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
+
+# We should systematically use the correct value in our
+# http_build_query calls depending on whether we're building
+# a link in a tag (&amp;) or a redirect URL (&). But that could 
+# introduce bugs in the short term, so in this stable branch 
+# we'll override this setting. & works in every browser ever made,
+# although it is technically not standards compliant.
+
+php_value arg_separator.output &
