@@ -1,4 +1,4 @@
-<?php use_helper('I18N', 'Jquery') ?>
+<?php use_helper('I18N', 'jQuery') ?>
 
 <?php slot('a-tabs', '') ?>
 <?php slot('a-login', '') ?>
