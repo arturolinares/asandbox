@@ -25,7 +25,7 @@
  * @method Tag                 setTripleValue()      Sets the current record's "triple_value" value
  * @method Tag                 setTagging()          Sets the current record's "Tagging" collection
  * 
- * @package    content
+ * @package    asandbox
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $

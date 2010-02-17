@@ -28,7 +28,7 @@
  * @method aSlot               setAreaVersionSlots() Sets the current record's "AreaVersionSlots" collection
  * @method aSlot               setASlotMediaItem()   Sets the current record's "aSlotMediaItem" collection
  * 
- * @package    content
+ * @package    asandbox
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $

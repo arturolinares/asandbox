@@ -48,13 +48,11 @@ all:
         normal:
           label: Normal
           options:
-            interval: 0
             title: false
             arrows: true
         compact:
           label: Compact
           options:
-            interval: 0
             title: true
             arrows: true
         autoplay:

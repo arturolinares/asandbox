@@ -28,7 +28,7 @@
  * @method aMediaCategory      setAMediaItemCategory() Sets the current record's "aMediaItemCategory" collection
  * @method aMediaCategory      setAMediaPageCategory() Sets the current record's "aMediaPageCategory" collection
  * 
- * @package    content
+ * @package    asandbox
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $
