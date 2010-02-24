@@ -37,7 +37,7 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'           => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'id', 'required' => false)),
-      'type'         => new sfValidatorChoice(array('choices' => array('post' => 'post', 'event' => 'event'))),
+      'type'         => new sfValidatorChoice(array('choices' => array(0 => 'post', 1 => 'event'))),
       'author_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Author'), 'required' => false)),
       'category_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Category'), 'required' => false)),
       'title'        => new sfValidatorString(array('max_length' => 255)),

@@ -36,7 +36,7 @@ abstract class BaseaMediaItemForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'                    => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'id', 'required' => false)),
-      'type'                  => new sfValidatorChoice(array('choices' => array('image' => 'image', 'video' => 'video', 'audio' => 'audio', 'pdf' => 'pdf'))),
+      'type'                  => new sfValidatorChoice(array('choices' => array(0 => 'image', 1 => 'video', 2 => 'audio', 3 => 'pdf'))),
       'service_url'           => new sfValidatorString(array('max_length' => 200, 'required' => false)),
       'format'                => new sfValidatorString(array('max_length' => 10, 'required' => false)),
       'width'                 => new sfValidatorInteger(array('required' => false)),
