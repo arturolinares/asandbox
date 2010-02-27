@@ -138,7 +138,9 @@ all:
       
   aimageconverter:
     path: /opt/local/bin
-
+    # To force use of gd shut off netpbm
+    # netpbm: false
+    
   # You need to set this to your site's hostname to use a:refresh to update
   # URLs in media slots etc
   
