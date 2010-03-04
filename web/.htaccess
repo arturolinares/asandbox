@@ -40,4 +40,9 @@ Options +FollowSymLinks +ExecCGI
 # we'll override this setting. & works in every browser ever made,
 # although it is technically not standards compliant.
 
-php_value arg_separator.output &
+# This is now commented out to avoid breakage for those who
+# use fastcgi or other environments where php_value is not
+# available. Uncomment this line or, if you can't do that,
+# make sure you set arg_separator.output to & in php.ini
+
+# php_value arg_separator.output &
