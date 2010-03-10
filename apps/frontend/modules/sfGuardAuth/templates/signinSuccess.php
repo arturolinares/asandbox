@@ -31,3 +31,9 @@
 		
   </form>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#signin_username').focus();
+	});
+</script>
