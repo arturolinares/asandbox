@@ -19,10 +19,10 @@
  * @method sfGuardUserPermission setSfGuardUser()       Sets the current record's "sfGuardUser" value
  * @method sfGuardUserPermission setSfGuardPermission() Sets the current record's "sfGuardPermission" value
  * 
- * @package    asandbox
+ * @package    content
  * @subpackage model
  * @author     Your name here
- * @version    SVN: $Id: Builder.php 7021 2010-01-12 20:39:49Z lsmith $
+ * @version    SVN: $Id: Builder.php 7294 2010-03-02 17:59:20Z jwage $
  */
 abstract class BasesfGuardUserPermission extends sfDoctrineRecord
 {
