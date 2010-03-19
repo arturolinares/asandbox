@@ -282,10 +282,6 @@
 <source>You are editing: %title%</source>
 <target>Vous éditez&amp;nbsp;: %title%</target>
 </trans-unit>
-<trans-unit id="71">
-<source>Tags should be separated by commas. Example: sales, kittens, laboratory</source>
-<target>Les étiquettes doivent être séparée par des virgules. Exemple&amp;nbsp;: ventes, chatons, laboratoire</target>
-</trans-unit>
 <trans-unit id="72">
 <source>Hidden Photos can be used in photo slots, but are not displayed in the Media section.</source>
 <target>Les photos cachées peuvent être utilisées dans les emplacements photo mais ne sont pas affichées dans la section média.</target>
@@ -1013,6 +1009,134 @@
 <trans-unit id="312">
 <source>Item-5</source>
 <target>Element-5</target>
+</trans-unit>
+<trans-unit id="313">
+<source>Tags should be separated by commas. Example: teachers, kittens, buildings</source>
+<target>Les étiquettes doivent être séparées par des virgules. Exemple&amp;nbsp;: professeurs, chattons, bâtiments</target>
+</trans-unit>
+<trans-unit id="314">
+<source>This Page</source>
+<target>Cette page</target>
+</trans-unit>
+<trans-unit id="315">
+<source>Choose a User to Add</source>
+<target>Choisissez un utilisateur à ajouter</target>
+</trans-unit>
+<trans-unit id="316">
+<source>Home Page</source>
+<target>Page d'accueil</target>
+</trans-unit>
+<trans-unit id="317">
+<source>Default Page</source>
+<target>Page par défault</target>
+</trans-unit>
+<trans-unit id="318">
+<source>Template-Based</source>
+<target>Basé sur un gabarit</target>
+</trans-unit>
+<trans-unit id="319">
+<source>Media</source>
+<target>Média</target>
+</trans-unit>
+<trans-unit id="320">
+<source>Public</source>
+<target>Publique</target>
+</trans-unit>
+<trans-unit id="321">
+<source>Hidden</source>
+<target>Cachée</target>
+</trans-unit>
+<trans-unit id="322">
+<source>All</source>
+<target>Tout</target>
+</trans-unit>
+<trans-unit id="323">
+<source>Image</source>
+<target>Image</target>
+</trans-unit>
+<trans-unit id="324">
+<source>Video</source>
+<target>Vidéo</target>
+</trans-unit>
+<trans-unit id="325">
+<source>PDF</source>
+<target>PDF</target>
+</trans-unit>
+<trans-unit id="326">
+<source>Reorganize</source>
+<target>Réorganiser</target>
+</trans-unit>
+<trans-unit id="327">
+<source>Users</source>
+<target>Utilisateurs</target>
+</trans-unit>
+<trans-unit id="345">
+<source>Editing User &quot;%%username%%&quot;</source>
+<target>Edition de l'utilisateur &amp;laquo;&amp;nbsp;%%username%%&amp;nbsp;&amp;raquo;</target>
+</trans-unit>
+<trans-unit id="346">
+<source>No result</source>
+<target>Pas de résultat</target>
+</trans-unit>
+<trans-unit id="347">
+<source>Actions</source>
+<target>Actions</target>
+</trans-unit>
+<trans-unit id="348">
+<source>User list</source>
+<target>Liste d'utilisateur</target>
+</trans-unit>
+<trans-unit id="349">
+<source>%%username%% - %%created_at%% - %%updated_at%% - %%last_login%%</source>
+<target>%%username%% - %%created_at%% - %%updated_at%% - %%last_login%%</target>
+</trans-unit>
+<trans-unit id="350">
+<source>reset</source>
+<target>Réinitialiser</target>
+</trans-unit>
+<trans-unit id="351">
+<source>Choose an action</source>
+<target>Choisissez une action</target>
+</trans-unit>
+<trans-unit id="352">
+<source>Checked</source>
+<target>Coché</target>
+</trans-unit>
+<trans-unit id="353">
+<source>New User</source>
+<target>Nouvel utilisateur</target>
+</trans-unit>
+<trans-unit id="354">
+<source>Last login</source>
+<target>Dernière connection</target>
+</trans-unit>
+<trans-unit id="355">
+<source>Editing Permission &quot;%%name%%&quot;</source>
+<target>Edition de la permission &amp;laquo;&amp;nbsp;%%name%%&amp;nbsp;&amp;raquo;</target>
+</trans-unit>
+<trans-unit id="356">
+<source>Permission list</source>
+<target>Liste de permission</target>
+</trans-unit>
+<trans-unit id="357">
+<source>%%name%% - %%description%% - %%created_at%% - %%updated_at%%</source>
+<target>%%name%% - %%description%% - %%created_at%% - %%updated_at%%</target>
+</trans-unit>
+<trans-unit id="358">
+<source>New Permission</source>
+<target>Nouvelle permission</target>
+</trans-unit>
+<trans-unit id="359">
+<source>Editing Group &quot;%%name%%&quot;</source>
+<target>Edition du groupe &amp;laquo;&amp;nbsp;%%name%%&amp;nbsp;&amp;raquo;</target>
+</trans-unit>
+<trans-unit id="360">
+<source>Group list</source>
+<target>Liste de groupe</target>
+</trans-unit>
+<trans-unit id="361">
+<source>New Group</source>
+<target>Nouveau groupe</target>
 </trans-unit>
 </body>
 </file>
