@@ -1,6 +1,9 @@
 # default values
 all:
   a:
+    # If true, there will be a language switcher next to the login/logout button
+    i18n_switch: true
+    i18n_languages: [en, fr, de]
     # By default new slots in an area go to the top, you can change that here
     # new_slots_top: false
     routes_register: false 
