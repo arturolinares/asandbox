@@ -7,4 +7,9 @@ all:
       dsn:        mysql:dbname=asandbox;host=localhost
       username: root
       password: root
-      
+      # You need these for non-latin character sets and full I18N
+      encoding: utf8
+      attributes:
+        DEFAULT_TABLE_TYPE: INNODB
+        DEFAULT_TABLE_CHARSET: utf8
+        DEFAULT_TABLE_COLLATE: utf8_general_ci
