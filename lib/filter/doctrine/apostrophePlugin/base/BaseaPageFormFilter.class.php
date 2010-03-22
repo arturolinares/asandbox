@@ -26,7 +26,6 @@ abstract class BaseaPageFormFilter extends BaseFormFilterDoctrine
       'lft'                   => new sfWidgetFormFilterInput(),
       'rgt'                   => new sfWidgetFormFilterInput(),
       'level'                 => new sfWidgetFormFilterInput(),
-      'blog_categories_list'  => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory')),
       'media_categories_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aMediaCategory')),
     ));
 
@@ -44,7 +43,6 @@ abstract class BaseaPageFormFilter extends BaseFormFilterDoctrine
       'lft'                   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'rgt'                   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'level'                 => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'blog_categories_list'  => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory', 'required' => false)),
       'media_categories_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aMediaCategory', 'required' => false)),
     ));
 
@@ -55,22 +53,6 @@ abstract class BaseaPageFormFilter extends BaseFormFilterDoctrine
     $this->setupInheritance();
 
     parent::setup();
-  }
-
-  public function addBlogCategoriesListColumnQuery(Doctrine_Query $query, $field, $values)
-  {
-    if (!is_array($values))
-    {
-      $values = array($values);
-    }
-
-    if (!count($values))
-    {
-      return;
-    }
-
-    $query->leftJoin('r.aBlogPageCategory aBlogPageCategory')
-          ->andWhereIn('aBlogPageCategory.blog_category_id', $values);
   }
 
   public function addMediaCategoriesListColumnQuery(Doctrine_Query $query, $field, $values)
@@ -111,7 +93,6 @@ abstract class BaseaPageFormFilter extends BaseFormFilterDoctrine
       'lft'                   => 'Number',
       'rgt'                   => 'Number',
       'level'                 => 'Number',
-      'blog_categories_list'  => 'ManyKey',
       'media_categories_list' => 'ManyKey',
     );
   }

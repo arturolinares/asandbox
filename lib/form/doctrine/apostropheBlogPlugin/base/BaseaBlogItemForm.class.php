@@ -56,10 +56,6 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
       'version'      => new sfValidatorInteger(array('required' => false)),
     ));
 
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'aBlogItem', 'column' => array('slug')))
-    );
-
     $this->widgetSchema->setNameFormat('a_blog_item[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

@@ -21,7 +21,6 @@ abstract class BaseaBlogCategoryForm extends BaseFormDoctrine
       'created_at'  => new sfWidgetFormDateTime(),
       'updated_at'  => new sfWidgetFormDateTime(),
       'slug'        => new sfWidgetFormInputText(),
-      'pages_list'  => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aPage')),
     ));
 
     $this->setValidators(array(
@@ -31,12 +30,7 @@ abstract class BaseaBlogCategoryForm extends BaseFormDoctrine
       'created_at'  => new sfValidatorDateTime(),
       'updated_at'  => new sfValidatorDateTime(),
       'slug'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'pages_list'  => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aPage', 'required' => false)),
     ));
-
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'aBlogCategory', 'column' => array('slug')))
-    );
 
     $this->widgetSchema->setNameFormat('a_blog_category[%s]');
 
@@ -50,62 +44,6 @@ abstract class BaseaBlogCategoryForm extends BaseFormDoctrine
   public function getModelName()
   {
     return 'aBlogCategory';
-  }
-
-  public function updateDefaultsFromObject()
-  {
-    parent::updateDefaultsFromObject();
-
-    if (isset($this->widgetSchema['pages_list']))
-    {
-      $this->setDefault('pages_list', $this->object->Pages->getPrimaryKeys());
-    }
-
-  }
-
-  protected function doSave($con = null)
-  {
-    $this->savePagesList($con);
-
-    parent::doSave($con);
-  }
-
-  public function savePagesList($con = null)
-  {
-    if (!$this->isValid())
-    {
-      throw $this->getErrorSchema();
-    }
-
-    if (!isset($this->widgetSchema['pages_list']))
-    {
-      // somebody has unset this widget
-      return;
-    }
-
-    if (null === $con)
-    {
-      $con = $this->getConnection();
-    }
-
-    $existing = $this->object->Pages->getPrimaryKeys();
-    $values = $this->getValue('pages_list');
-    if (!is_array($values))
-    {
-      $values = array();
-    }
-
-    $unlink = array_diff($existing, $values);
-    if (count($unlink))
-    {
-      $this->object->unlink('Pages', array_values($unlink));
-    }
-
-    $link = array_diff($values, $existing);
-    if (count($link))
-    {
-      $this->object->link('Pages', array_values($link));
-    }
   }
 
 }

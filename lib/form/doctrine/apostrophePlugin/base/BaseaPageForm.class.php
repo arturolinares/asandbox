@@ -29,7 +29,6 @@ abstract class BaseaPageForm extends BaseFormDoctrine
       'lft'                   => new sfWidgetFormInputText(),
       'rgt'                   => new sfWidgetFormInputText(),
       'level'                 => new sfWidgetFormInputText(),
-      'blog_categories_list'  => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory')),
       'media_categories_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aMediaCategory')),
     ));
 
@@ -48,7 +47,6 @@ abstract class BaseaPageForm extends BaseFormDoctrine
       'lft'                   => new sfValidatorInteger(array('required' => false)),
       'rgt'                   => new sfValidatorInteger(array('required' => false)),
       'level'                 => new sfValidatorInteger(array('required' => false)),
-      'blog_categories_list'  => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory', 'required' => false)),
       'media_categories_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aMediaCategory', 'required' => false)),
     ));
 
@@ -74,11 +72,6 @@ abstract class BaseaPageForm extends BaseFormDoctrine
   {
     parent::updateDefaultsFromObject();
 
-    if (isset($this->widgetSchema['blog_categories_list']))
-    {
-      $this->setDefault('blog_categories_list', $this->object->BlogCategories->getPrimaryKeys());
-    }
-
     if (isset($this->widgetSchema['media_categories_list']))
     {
       $this->setDefault('media_categories_list', $this->object->MediaCategories->getPrimaryKeys());
@@ -88,48 +81,9 @@ abstract class BaseaPageForm extends BaseFormDoctrine
 
   protected function doSave($con = null)
   {
-    $this->saveBlogCategoriesList($con);
     $this->saveMediaCategoriesList($con);
 
     parent::doSave($con);
-  }
-
-  public function saveBlogCategoriesList($con = null)
-  {
-    if (!$this->isValid())
-    {
-      throw $this->getErrorSchema();
-    }
-
-    if (!isset($this->widgetSchema['blog_categories_list']))
-    {
-      // somebody has unset this widget
-      return;
-    }
-
-    if (null === $con)
-    {
-      $con = $this->getConnection();
-    }
-
-    $existing = $this->object->BlogCategories->getPrimaryKeys();
-    $values = $this->getValue('blog_categories_list');
-    if (!is_array($values))
-    {
-      $values = array();
-    }
-
-    $unlink = array_diff($existing, $values);
-    if (count($unlink))
-    {
-      $this->object->unlink('BlogCategories', array_values($unlink));
-    }
-
-    $link = array_diff($values, $existing);
-    if (count($link))
-    {
-      $this->object->link('BlogCategories', array_values($link));
-    }
   }
 
   public function saveMediaCategoriesList($con = null)
