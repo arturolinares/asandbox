@@ -16,6 +16,8 @@
  * @property string $engine
  * @property sfGuardUser $Author
  * @property sfGuardUser $Deleter
+ * @property Doctrine_Collection $BlogCategories
+ * @property Doctrine_Collection $aBlogPageCategory
  * @property Doctrine_Collection $Areas
  * @property Doctrine_Collection $Accesses
  * @property Doctrine_Collection $aLuceneUpdate
@@ -33,6 +35,8 @@
  * @method string              getEngine()             Returns the current record's "engine" value
  * @method sfGuardUser         getAuthor()             Returns the current record's "Author" value
  * @method sfGuardUser         getDeleter()            Returns the current record's "Deleter" value
+ * @method Doctrine_Collection getBlogCategories()     Returns the current record's "BlogCategories" collection
+ * @method Doctrine_Collection getABlogPageCategory()  Returns the current record's "aBlogPageCategory" collection
  * @method Doctrine_Collection getAreas()              Returns the current record's "Areas" collection
  * @method Doctrine_Collection getAccesses()           Returns the current record's "Accesses" collection
  * @method Doctrine_Collection getALuceneUpdate()      Returns the current record's "aLuceneUpdate" collection
@@ -49,6 +53,8 @@
  * @method aPage               setEngine()             Sets the current record's "engine" value
  * @method aPage               setAuthor()             Sets the current record's "Author" value
  * @method aPage               setDeleter()            Sets the current record's "Deleter" value
+ * @method aPage               setBlogCategories()     Sets the current record's "BlogCategories" collection
+ * @method aPage               setABlogPageCategory()  Sets the current record's "aBlogPageCategory" collection
  * @method aPage               setAreas()              Sets the current record's "Areas" collection
  * @method aPage               setAccesses()           Sets the current record's "Accesses" collection
  * @method aPage               setALuceneUpdate()      Sets the current record's "aLuceneUpdate" collection
@@ -58,7 +64,7 @@
  * @package    asandbox
  * @subpackage model
  * @author     Your name here
- * @version    SVN: $Id: Builder.php 7200 2010-02-21 09:37:37Z beberlei $
+ * @version    SVN: $Id: Builder.php 7380 2010-03-15 21:07:50Z jwage $
  */
 abstract class BaseaPage extends sfDoctrineRecord
 {
@@ -129,6 +135,15 @@ abstract class BaseaPage extends sfDoctrineRecord
         $this->hasOne('sfGuardUser as Deleter', array(
              'local' => 'author_id',
              'foreign' => 'id'));
+
+        $this->hasMany('aBlogCategory as BlogCategories', array(
+             'refClass' => 'aBlogPageCategory',
+             'local' => 'page_id',
+             'foreign' => 'blog_category_id'));
+
+        $this->hasMany('aBlogPageCategory', array(
+             'local' => 'id',
+             'foreign' => 'page_id'));
 
         $this->hasMany('aArea as Areas', array(
              'local' => 'id',

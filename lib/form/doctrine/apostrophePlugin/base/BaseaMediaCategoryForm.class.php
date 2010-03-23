@@ -37,7 +37,10 @@ abstract class BaseaMediaCategoryForm extends BaseFormDoctrine
     ));
 
     $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'aMediaCategory', 'column' => array('name')))
+      new sfValidatorAnd(array(
+        new sfValidatorDoctrineUnique(array('model' => 'aMediaCategory', 'column' => array('name'))),
+        new sfValidatorDoctrineUnique(array('model' => 'aMediaCategory', 'column' => array('slug'))),
+      ))
     );
 
     $this->widgetSchema->setNameFormat('a_media_category[%s]');
