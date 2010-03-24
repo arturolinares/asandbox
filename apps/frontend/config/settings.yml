@@ -26,6 +26,7 @@ test:
 
 all:
   .settings:
+    i18n: on
     rich_text_fck_js_dir:   apostrophePlugin/js/fckeditor
     # Form security secret (CSRF protection)
     
