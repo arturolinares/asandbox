@@ -66,18 +66,6 @@
 <source>Categories</source>
 <target>Catégories</target>
 </trans-unit>
-<trans-unit id="17">
-<source>Add Category</source>
-<target>Ajouter une catégorie</target>
-</trans-unit>
-<trans-unit id="18">
-<source>+ Add Category</source>
-<target>+ Ajouter une catégorie</target>
-</trans-unit>
-<trans-unit id="19">
-<source>There are no nonempty categories.</source>
-<target>Il n'y a pas de catégorie non-vide.</target>
-</trans-unit>
 <trans-unit id="20">
 <source>Selected Tag</source>
 <target>Etiquette sélectionnée</target>
@@ -1137,6 +1125,122 @@
 <trans-unit id="361">
 <source>New Group</source>
 <target>Nouveau groupe</target>
+</trans-unit>
+<trans-unit id="362">
+<source>Find in Media</source>
+<target>Trouver dans les médias</target>
+</trans-unit>
+<trans-unit id="364">
+<source>Plain Text</source>
+<target>Texte brut</target>
+</trans-unit>
+<trans-unit id="365">
+<source>Rich Text</source>
+<target>Texte riche</target>
+</trans-unit>
+<trans-unit id="366">
+<source>RSS Feed</source>
+<target>Flux RSS</target>
+</trans-unit>
+<trans-unit id="367">
+<source>Slideshow</source>
+<target>Diaporama</target>
+</trans-unit>
+<trans-unit id="368">
+<source>Button</source>
+<target>Bouton</target>
+</trans-unit>
+<trans-unit id="369">
+<source>Raw HTML</source>
+<target>HTML brut</target>
+</trans-unit>
+<trans-unit id="370">
+<source>Groups</source>
+<target>Groupes</target>
+</trans-unit>
+<trans-unit id="371">
+<source>Remember</source>
+<target>Se rappeler</target>
+</trans-unit>
+<trans-unit id="372">
+<source>Language</source>
+<target>Langue</target>
+</trans-unit>
+<trans-unit id="373">
+<source>Published</source>
+<target>Publié</target>
+</trans-unit>
+<trans-unit id="374">
+<source>Unpublished</source>
+<target>Non-publié</target>
+</trans-unit>
+<trans-unit id="375">
+<source>results</source>
+<target>résultats</target>
+</trans-unit>
+<trans-unit id="376">
+<source>Login Required</source>
+<target>Connection requise</target>
+</trans-unit>
+<trans-unit id="377">
+<source>The username and/or password is invalid.</source>
+<target>Le nom d'utilisateur et/ou le mot de passe est invalide.</target>
+</trans-unit>
+<trans-unit id="378">
+<source>Create Page</source>
+<target>Créer une page</target>
+</trans-unit>
+<trans-unit id="379">
+<source>&lt;p&gt;If you want to grant a user the ability to edit a portion of the site, first add them to the &lt;b&gt;editor&lt;/b&gt; group.&lt;/p&gt;&lt;p&gt;Then browse to that area of the site and click the gear to add them to the list of users who can edit in that particular area.&lt;/p&gt;&lt;p&gt;If you want a user to have full control over the entire site, add them to the &lt;b&gt;admin&lt;/b&gt; group.&lt;/p&gt;</source>
+<target>&lt;p&gt;Si vous souhaitez donner la possibilité à un utilisateur d'éditer une portion du site, commencer par l'ajouter au groupe &lt;b&gt;editor&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Naviguez ensuite jusqu'à cette portion du site et cliquez sur la roue dentée pour l'ajouter à la liste des utilisateurs qui peuvent éditer dans cette zone particulière.&lt;/p&gt;&lt;p&gt;Si vous souhaitez qu'un utilisateur puisse avoir un control complet sur l'ensemble du site, ajoutez le au groupe &lt;b&gt;admin&lt;/b&gt;.&lt;/p&gt;</target>
+</trans-unit>
+<trans-unit id="380">
+<source>New</source>
+<target>Nouveau</target>
+</trans-unit>
+<trans-unit id="381">
+<source>Back to list</source>
+<target>Retour à la liste</target>
+</trans-unit>
+<trans-unit id="382">
+<source>Save and add</source>
+<target>Sauver et Ajouter</target>
+</trans-unit>
+<trans-unit id="383">
+<source>Filters</source>
+<target>Filtres</target>
+</trans-unit>
+<trans-unit id="384">
+<source>Password (again)</source>
+<target>Mot de passe (à nouveau)</target>
+</trans-unit>
+<trans-unit id="385">
+<source>There are no categories that contain media.</source>
+<target>Il n'y a pas de catégorie contenant de média.</target>
+</trans-unit>
+<trans-unit id="386">
+<source>[0] no result|[1] 1 result|(1,+Inf] %1% results</source>
+<target>[0] pas de résultat|[1] 1 résultat|(1,+Inf] %1% résultats</target>
+</trans-unit>
+<trans-unit id="387">
+<source>The item was created successfully.</source>
+<target>L'élément a été créé avec succès</target>
+</trans-unit>
+<trans-unit id="388">
+<source>The item was updated successfully.</source>
+<target>L'élément a été mis à jour avec succès</target>
+</trans-unit>
+<trans-unit id="389">
+<source>You can add another one below.</source>
+<target>Vous pouvez en ajouter un ci-dessous.</target>
+</trans-unit>
+<trans-unit id="390">
+<source>The item has not been saved due to some errors.</source>
+<target>L'élément n'a pas été sauvegardé en raison de certaines erreurs.</target>
+</trans-unit>
+<trans-unit id="391">
+<source>Upload Photos</source>
+<target>Envoyer les photos</target>
 </trans-unit>
 </body>
 </file>
