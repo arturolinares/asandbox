@@ -25,7 +25,7 @@
 		
 		<ul class="a-form-row submit">
     	<li>
-				<input type="submit" class="a-btn" value="<?php echo __('Sign In', null, 'apostrophe') ?>" />
+				<input type="submit" class="a-submit" value="<?php echo __('Sign In', null, 'apostrophe') ?>" />
 			</li>
 		</ul>
 		
