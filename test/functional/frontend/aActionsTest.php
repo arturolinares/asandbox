@@ -3,6 +3,7 @@
 include(dirname(__FILE__).'/../../bootstrap/functional.php');
 
 $b = new aTestFunctional(new aBrowser());
+$b->setOptions(array('default-prefix' => '/admin/'));
 
 $b->info('1 - CMS Credentials')->
   info('  1.1 - Unauthenticated users do not see the CMS controls or the buttons in the toolbar')->
