@@ -164,7 +164,7 @@ abstract class BaseaMediaItem extends sfDoctrineRecord
               0 => 'title',
              ),
              'unique' => true,
-             'builder' => 'aMediaItemTable::slugify',
+             'builder' => 'aTools::slugify',
              ));
         $this->actAs($timestampable0);
         $this->actAs($taggable0);

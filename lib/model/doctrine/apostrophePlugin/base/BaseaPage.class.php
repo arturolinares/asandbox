@@ -23,6 +23,7 @@
  * @property Doctrine_Collection $aLuceneUpdate
  * @property Doctrine_Collection $MediaCategories
  * @property Doctrine_Collection $aMediaPageCategory
+ * @property Doctrine_Collection $aRedirect
  * 
  * @method integer             getId()                 Returns the current record's "id" value
  * @method string              getSlug()               Returns the current record's "slug" value
@@ -42,6 +43,7 @@
  * @method Doctrine_Collection getALuceneUpdate()      Returns the current record's "aLuceneUpdate" collection
  * @method Doctrine_Collection getMediaCategories()    Returns the current record's "MediaCategories" collection
  * @method Doctrine_Collection getAMediaPageCategory() Returns the current record's "aMediaPageCategory" collection
+ * @method Doctrine_Collection getARedirect()          Returns the current record's "aRedirect" collection
  * @method aPage               setId()                 Sets the current record's "id" value
  * @method aPage               setSlug()               Sets the current record's "slug" value
  * @method aPage               setTemplate()           Sets the current record's "template" value
@@ -60,6 +62,7 @@
  * @method aPage               setALuceneUpdate()      Sets the current record's "aLuceneUpdate" collection
  * @method aPage               setMediaCategories()    Sets the current record's "MediaCategories" collection
  * @method aPage               setAMediaPageCategory() Sets the current record's "aMediaPageCategory" collection
+ * @method aPage               setARedirect()          Sets the current record's "aRedirect" collection
  * 
  * @package    asandbox
  * @subpackage model
@@ -163,6 +166,10 @@ abstract class BaseaPage extends sfDoctrineRecord
              'foreign' => 'media_category_id'));
 
         $this->hasMany('aMediaPageCategory', array(
+             'local' => 'id',
+             'foreign' => 'page_id'));
+
+        $this->hasMany('aRedirect', array(
              'local' => 'id',
              'foreign' => 'page_id'));
 
