@@ -36,16 +36,16 @@ abstract class BaseaBlogPageCategory extends sfDoctrineRecord
              'type' => 'integer',
              'autoincrement' => true,
              'primary' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('page_id', 'integer', 4, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('blog_category_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
 
         $this->option('symfony', array(

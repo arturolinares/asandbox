@@ -72,7 +72,7 @@ abstract class BaseaMediaItem extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('type', 'enum', null, array(
              'type' => 'enum',
@@ -87,39 +87,39 @@ abstract class BaseaMediaItem extends sfDoctrineRecord
              ));
         $this->hasColumn('service_url', 'string', 200, array(
              'type' => 'string',
-             'length' => '200',
+             'length' => 200,
              ));
         $this->hasColumn('format', 'string', 10, array(
              'type' => 'string',
-             'length' => '10',
+             'length' => 10,
              ));
         $this->hasColumn('width', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('height', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('embed', 'string', 1000, array(
              'type' => 'string',
-             'length' => '1000',
+             'length' => 1000,
              ));
         $this->hasColumn('title', 'string', 200, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '200',
+             'length' => 200,
              ));
         $this->hasColumn('description', 'string', null, array(
              'type' => 'string',
              ));
         $this->hasColumn('credit', 'string', 200, array(
              'type' => 'string',
-             'length' => '200',
+             'length' => 200,
              ));
         $this->hasColumn('owner_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('view_is_secure', 'boolean', null, array(
              'type' => 'boolean',

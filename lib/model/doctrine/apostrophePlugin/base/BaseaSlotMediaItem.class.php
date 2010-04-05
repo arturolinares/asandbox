@@ -32,12 +32,12 @@ abstract class BaseaSlotMediaItem extends sfDoctrineRecord
         $this->hasColumn('media_item_id', 'integer', 4, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('slot_id', 'integer', 4, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => '4',
+             'length' => 4,
              ));
 
         $this->option('symfony', array(

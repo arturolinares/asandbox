@@ -32,12 +32,12 @@ abstract class BasesfGuardUserPermission extends sfDoctrineRecord
         $this->hasColumn('user_id', 'integer', 4, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('permission_id', 'integer', 4, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => '4',
+             'length' => 4,
              ));
 
         $this->option('symfony', array(

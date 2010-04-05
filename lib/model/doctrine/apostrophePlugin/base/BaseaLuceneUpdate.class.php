@@ -28,11 +28,11 @@ abstract class BaseaLuceneUpdate extends sfDoctrineRecord
         $this->setTableName('a_lucene_update');
         $this->hasColumn('page_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('culture', 'string', 7, array(
              'type' => 'string',
-             'length' => '7',
+             'length' => 7,
              ));
 
 

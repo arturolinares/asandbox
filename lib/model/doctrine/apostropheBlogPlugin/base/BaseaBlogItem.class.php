@@ -69,7 +69,7 @@ abstract class BaseaBlogItem extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('type', 'enum', null, array(
              'type' => 'enum',
@@ -82,16 +82,16 @@ abstract class BaseaBlogItem extends sfDoctrineRecord
              ));
         $this->hasColumn('author_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('category_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('title', 'string', 255, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '255',
+             'length' => 255,
              ));
         $this->hasColumn('excerpt', 'string', null, array(
              'type' => 'string',

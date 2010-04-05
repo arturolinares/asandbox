@@ -36,20 +36,20 @@ abstract class BasesfGuardRememberKey extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('user_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('remember_key', 'string', 32, array(
              'type' => 'string',
-             'length' => '32',
+             'length' => 32,
              ));
         $this->hasColumn('ip_address', 'string', 50, array(
              'type' => 'string',
              'primary' => true,
-             'length' => '50',
+             'length' => 50,
              ));
 
         $this->option('symfony', array(

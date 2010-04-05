@@ -42,15 +42,15 @@ abstract class BaseaSlot extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('type', 'string', 100, array(
              'type' => 'string',
-             'length' => '100',
+             'length' => 100,
              ));
         $this->hasColumn('variant', 'string', 100, array(
              'type' => 'string',
-             'length' => '100',
+             'length' => 100,
              ));
         $this->hasColumn('value', 'clob', null, array(
              'type' => 'clob',

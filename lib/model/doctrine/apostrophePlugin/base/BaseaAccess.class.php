@@ -34,15 +34,15 @@ abstract class BaseaAccess extends sfDoctrineRecord
         $this->setTableName('a_access');
         $this->hasColumn('page_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('privilege', 'string', 100, array(
              'type' => 'string',
-             'length' => '100',
+             'length' => 100,
              ));
         $this->hasColumn('user_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
 
 
