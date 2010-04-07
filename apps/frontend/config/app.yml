@@ -94,6 +94,10 @@ all:
       aBlog: Blog
       aCalendar: Calendar
       aMedia: Media
+
+  aAdmin:
+    web_dir: /apostrophePlugin
+
   aMedia:
     # If not set, the same site is assumed
     # client_site: "http://www.mymediasite.com/"
