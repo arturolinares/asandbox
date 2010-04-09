@@ -15,9 +15,11 @@
  * @property timestamp $last_login
  * @property Doctrine_Collection $groups
  * @property Doctrine_Collection $permissions
- * @property Doctrine_Collection $aBlogItems
- * @property Doctrine_Collection $aBlogPosts
- * @property Doctrine_Collection $aBlogEvents
+ * @property Doctrine_Collection $BlogAuthorItems
+ * @property Doctrine_Collection $BlogEditorItems
+ * @property Doctrine_Collection $BlogItemEditors
+ * @property Doctrine_Collection $BlogCategories
+ * @property Doctrine_Collection $BlogCategoryUsers
  * @property Doctrine_Collection $aPage
  * @property Doctrine_Collection $aAreaVersion
  * @property Doctrine_Collection $Accesses
@@ -36,9 +38,11 @@
  * @method timestamp           getLastLogin()             Returns the current record's "last_login" value
  * @method Doctrine_Collection getGroups()                Returns the current record's "groups" collection
  * @method Doctrine_Collection getPermissions()           Returns the current record's "permissions" collection
- * @method Doctrine_Collection getABlogItems()            Returns the current record's "aBlogItems" collection
- * @method Doctrine_Collection getABlogPosts()            Returns the current record's "aBlogPosts" collection
- * @method Doctrine_Collection getABlogEvents()           Returns the current record's "aBlogEvents" collection
+ * @method Doctrine_Collection getBlogAuthorItems()       Returns the current record's "BlogAuthorItems" collection
+ * @method Doctrine_Collection getBlogEditorItems()       Returns the current record's "BlogEditorItems" collection
+ * @method Doctrine_Collection getBlogItemEditors()       Returns the current record's "BlogItemEditors" collection
+ * @method Doctrine_Collection getBlogCategories()        Returns the current record's "BlogCategories" collection
+ * @method Doctrine_Collection getBlogCategoryUsers()     Returns the current record's "BlogCategoryUsers" collection
  * @method Doctrine_Collection getAPage()                 Returns the current record's "aPage" collection
  * @method Doctrine_Collection getAAreaVersion()          Returns the current record's "aAreaVersion" collection
  * @method Doctrine_Collection getAccesses()              Returns the current record's "Accesses" collection
@@ -56,9 +60,11 @@
  * @method sfGuardUser         setLastLogin()             Sets the current record's "last_login" value
  * @method sfGuardUser         setGroups()                Sets the current record's "groups" collection
  * @method sfGuardUser         setPermissions()           Sets the current record's "permissions" collection
- * @method sfGuardUser         setABlogItems()            Sets the current record's "aBlogItems" collection
- * @method sfGuardUser         setABlogPosts()            Sets the current record's "aBlogPosts" collection
- * @method sfGuardUser         setABlogEvents()           Sets the current record's "aBlogEvents" collection
+ * @method sfGuardUser         setBlogAuthorItems()       Sets the current record's "BlogAuthorItems" collection
+ * @method sfGuardUser         setBlogEditorItems()       Sets the current record's "BlogEditorItems" collection
+ * @method sfGuardUser         setBlogItemEditors()       Sets the current record's "BlogItemEditors" collection
+ * @method sfGuardUser         setBlogCategories()        Sets the current record's "BlogCategories" collection
+ * @method sfGuardUser         setBlogCategoryUsers()     Sets the current record's "BlogCategoryUsers" collection
  * @method sfGuardUser         setAPage()                 Sets the current record's "aPage" collection
  * @method sfGuardUser         setAAreaVersion()          Sets the current record's "aAreaVersion" collection
  * @method sfGuardUser         setAccesses()              Sets the current record's "Accesses" collection
@@ -67,7 +73,7 @@
  * @method sfGuardUser         setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser         setRememberKeys()          Sets the current record's "RememberKeys" value
  * 
- * @package    asandbox
+ * @package    symfony
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
@@ -137,17 +143,27 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'local' => 'user_id',
              'foreign' => 'permission_id'));
 
-        $this->hasMany('aBlogItem as aBlogItems', array(
+        $this->hasMany('aBlogItem as BlogAuthorItems', array(
              'local' => 'id',
              'foreign' => 'author_id'));
 
-        $this->hasMany('aBlogPost as aBlogPosts', array(
-             'local' => 'id',
-             'foreign' => 'author_id'));
+        $this->hasMany('aBlogItem as BlogEditorItems', array(
+             'refClass' => 'aBlogEditor',
+             'local' => 'user_id',
+             'foreign' => 'blog_item_id'));
 
-        $this->hasMany('aBlogEvent as aBlogEvents', array(
+        $this->hasMany('aBlogEditor as BlogItemEditors', array(
              'local' => 'id',
-             'foreign' => 'author_id'));
+             'foreign' => 'user_id'));
+
+        $this->hasMany('aBlogCategory as BlogCategories', array(
+             'refClass' => 'aBlogCategoryUser',
+             'local' => 'user_id',
+             'foreign' => 'blog_category_id'));
+
+        $this->hasMany('aBlogCategoryUser as BlogCategoryUsers', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
 
         $this->hasMany('aPage', array(
              'local' => 'id',

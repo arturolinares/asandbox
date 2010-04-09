@@ -16,6 +16,7 @@
  * @property string $engine
  * @property sfGuardUser $Author
  * @property sfGuardUser $Deleter
+ * @property Doctrine_Collection $aBlogItem
  * @property Doctrine_Collection $BlogCategories
  * @property Doctrine_Collection $aBlogPageCategory
  * @property Doctrine_Collection $Areas
@@ -36,6 +37,7 @@
  * @method string              getEngine()             Returns the current record's "engine" value
  * @method sfGuardUser         getAuthor()             Returns the current record's "Author" value
  * @method sfGuardUser         getDeleter()            Returns the current record's "Deleter" value
+ * @method Doctrine_Collection getABlogItem()          Returns the current record's "aBlogItem" collection
  * @method Doctrine_Collection getBlogCategories()     Returns the current record's "BlogCategories" collection
  * @method Doctrine_Collection getABlogPageCategory()  Returns the current record's "aBlogPageCategory" collection
  * @method Doctrine_Collection getAreas()              Returns the current record's "Areas" collection
@@ -55,6 +57,7 @@
  * @method aPage               setEngine()             Sets the current record's "engine" value
  * @method aPage               setAuthor()             Sets the current record's "Author" value
  * @method aPage               setDeleter()            Sets the current record's "Deleter" value
+ * @method aPage               setABlogItem()          Sets the current record's "aBlogItem" collection
  * @method aPage               setBlogCategories()     Sets the current record's "BlogCategories" collection
  * @method aPage               setABlogPageCategory()  Sets the current record's "aBlogPageCategory" collection
  * @method aPage               setAreas()              Sets the current record's "Areas" collection
@@ -64,7 +67,7 @@
  * @method aPage               setAMediaPageCategory() Sets the current record's "aMediaPageCategory" collection
  * @method aPage               setARedirect()          Sets the current record's "aRedirect" collection
  * 
- * @package    asandbox
+ * @package    symfony
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
@@ -138,6 +141,10 @@ abstract class BaseaPage extends sfDoctrineRecord
         $this->hasOne('sfGuardUser as Deleter', array(
              'local' => 'author_id',
              'foreign' => 'id'));
+
+        $this->hasMany('aBlogItem', array(
+             'local' => 'id',
+             'foreign' => 'page_id'));
 
         $this->hasMany('aBlogCategory as BlogCategories', array(
              'refClass' => 'aBlogPageCategory',
