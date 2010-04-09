@@ -45,23 +45,23 @@ abstract class BaseaAreaVersion extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('area_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('version', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('author_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('diff', 'string', 200, array(
              'type' => 'string',
-             'length' => '200',
+             'length' => 200,
              ));
 
 
@@ -94,7 +94,8 @@ abstract class BaseaAreaVersion extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'area_version_id'));
 
-        $timestampable0 = new Doctrine_Template_Timestampable();
+        $timestampable0 = new Doctrine_Template_Timestampable(array(
+             ));
         $this->actAs($timestampable0);
     }
 }

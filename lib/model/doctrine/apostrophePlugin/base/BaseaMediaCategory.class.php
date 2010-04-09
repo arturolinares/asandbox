@@ -42,12 +42,12 @@ abstract class BaseaMediaCategory extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('name', 'string', 255, array(
              'type' => 'string',
              'unique' => true,
-             'length' => '255',
+             'length' => 255,
              ));
         $this->hasColumn('description', 'string', null, array(
              'type' => 'string',

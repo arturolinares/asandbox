@@ -72,27 +72,27 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('username', 'string', 128, array(
              'type' => 'string',
              'notnull' => true,
              'unique' => true,
-             'length' => '128',
+             'length' => 128,
              ));
         $this->hasColumn('algorithm', 'string', 128, array(
              'type' => 'string',
              'default' => 'sha1',
              'notnull' => true,
-             'length' => '128',
+             'length' => 128,
              ));
         $this->hasColumn('salt', 'string', 128, array(
              'type' => 'string',
-             'length' => '128',
+             'length' => 128,
              ));
         $this->hasColumn('password', 'string', 128, array(
              'type' => 'string',
-             'length' => '128',
+             'length' => 128,
              ));
         $this->hasColumn('is_active', 'boolean', null, array(
              'type' => 'boolean',

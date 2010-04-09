@@ -69,16 +69,16 @@ abstract class BaseaPage extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('slug', 'string', 255, array(
              'type' => 'string',
              'unique' => true,
-             'length' => '255',
+             'length' => 255,
              ));
         $this->hasColumn('template', 'string', 100, array(
              'type' => 'string',
-             'length' => '100',
+             'length' => 100,
              ));
         $this->hasColumn('view_is_secure', 'boolean', null, array(
              'type' => 'boolean',
@@ -92,15 +92,15 @@ abstract class BaseaPage extends sfDoctrineRecord
              ));
         $this->hasColumn('author_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('deleter_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('engine', 'string', 255, array(
              'type' => 'string',
-             'length' => '255',
+             'length' => 255,
              ));
 
 
@@ -151,8 +151,10 @@ abstract class BaseaPage extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'page_id'));
 
-        $timestampable0 = new Doctrine_Template_Timestampable();
-        $nestedset0 = new Doctrine_Template_NestedSet();
+        $timestampable0 = new Doctrine_Template_Timestampable(array(
+             ));
+        $nestedset0 = new Doctrine_Template_NestedSet(array(
+             ));
         $this->actAs($timestampable0);
         $this->actAs($nestedset0);
     }

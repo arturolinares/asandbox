@@ -35,7 +35,7 @@ abstract class BaseTagging extends sfDoctrineRecord
              ));
         $this->hasColumn('taggable_model', 'string', 30, array(
              'type' => 'string',
-             'length' => '30',
+             'length' => 30,
              ));
         $this->hasColumn('taggable_id', 'integer', null, array(
              'type' => 'integer',
