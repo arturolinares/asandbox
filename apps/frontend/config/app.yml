@@ -36,9 +36,13 @@ all:
     
     # Message displayed next to button if client tries to click
     # max_page_limit_message: Cannot create a child page here.
-          
+    
+    addslot_button_style: big
+    history_button_style: no-label big
+    delete_button_style: no-label
+    
     slot_types:
-      aBlogPost: Blog Post
+      aBlog: Blog Post
       aBlogEvent: Blog Event
       aCalendar: Calendar
       
