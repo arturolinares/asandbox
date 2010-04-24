@@ -118,6 +118,10 @@ abstract class BaseaSlot extends sfDoctrineRecord
              array(
               'type' => 'aFeed',
              ),
+             'aNewRichTextSlot' => 
+             array(
+              'type' => 'aNewRichText',
+             ),
              ));
     }
 

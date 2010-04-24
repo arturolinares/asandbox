@@ -48,10 +48,12 @@ abstract class BaseaBlogItemCategory extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('aBlogItem as BlogItem', array(
              'local' => 'blog_item_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE'));
 
         $this->hasOne('aBlogCategory as BlogCategory', array(
              'local' => 'blog_category_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE'));
     }
 }

@@ -16,7 +16,7 @@ abstract class BaseaPageForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'                    => new sfWidgetFormInputHidden(),
-      'slug'                  => new sfWidgetFormInputText(),
+      'slug'                  => new sfWidgetFormTextarea(),
       'template'              => new sfWidgetFormInputText(),
       'view_is_secure'        => new sfWidgetFormInputCheckbox(),
       'archived'              => new sfWidgetFormInputCheckbox(),
@@ -35,7 +35,7 @@ abstract class BaseaPageForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'                    => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'id', 'required' => false)),
-      'slug'                  => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'slug'                  => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
       'template'              => new sfValidatorString(array('max_length' => 100, 'required' => false)),
       'view_is_secure'        => new sfValidatorBoolean(array('required' => false)),
       'archived'              => new sfValidatorBoolean(array('required' => false)),
@@ -51,10 +51,6 @@ abstract class BaseaPageForm extends BaseFormDoctrine
       'blog_categories_list'  => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory', 'required' => false)),
       'media_categories_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aMediaCategory', 'required' => false)),
     ));
-
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'aPage', 'column' => array('slug')))
-    );
 
     $this->widgetSchema->setNameFormat('a_page[%s]');
 
