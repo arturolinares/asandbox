@@ -1,4 +1,5 @@
-.svn
+# rsync doesn't need this explicit rule, but our cloud deployment tools do
+*/.svn/*
 /web/uploads/*
 /cache/*
 /log/*
