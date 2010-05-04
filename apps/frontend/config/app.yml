@@ -42,9 +42,11 @@ all:
     delete_button_style: no-label
     
     slot_types:
-      aBlog: Blog Post
-      aBlogEvent: Blog Event
-      aCalendar: Calendar
+      aBlog: Blog Posts
+      aBlogSingle: Blog Post
+      aEvent: Events
+      aEventSingle: Event
+
       aNewRichText: New Rich Text
       
       # The following slot types are always enabled (meaning only that you can include them in
@@ -104,7 +106,7 @@ all:
     engines:
       '': 'Template-Based'
       aBlog: Blog
-      aCalendar: Calendar
+      aEvent: Events
       aMedia: Media
 
   aAdmin:

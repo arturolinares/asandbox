@@ -66,7 +66,7 @@ abstract class BaseaBlogCategory extends sfDoctrineRecord
              ));
         $this->hasColumn('posts', 'boolean', null, array(
              'type' => 'boolean',
-             'default' => true,
+             'default' => false,
              ));
         $this->hasColumn('events', 'boolean', null, array(
              'type' => 'boolean',
