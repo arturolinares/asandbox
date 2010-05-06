@@ -1,4 +1,4 @@
-<?php use_helper('a') ?>
+	<?php use_helper('a') ?>
 
 <?php slot('body_class') ?>a-home<?php end_slot() ?>
 
@@ -14,7 +14,6 @@
 		'aSlideshow', 
 		'aVideo', 
 		'aImage',
-		'aBlog', 
 		'aFeed', 
 		'aButton', 
 		'aBlog',
@@ -30,26 +29,26 @@
 		'aSlideshow' => array("width" => 720, "flexHeight" => true, 'resizeType' => 's'),
 		'aVideo' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),
 		'aImage' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),
-		'aFeed' => array(),
 		'aButton' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),
+		'aBlog' => array('slideshowOptions' => array('width' => 100, 'height' => 100)), 
 	))) ?>
 
 <?php a_area('sidebar', array(
 	'allowed_types' => array(
-		'aRichText', 
-		'aSlideshow', 
-		'aVideo', 
-		'aBlog', 
+		'aRichText',
+		'aSlideshow',
+		'aVideo',
 		'aPDF',
-		'aFeed', 
-		'aImage', 
-		'aButton', 
+		'aFeed',
+		'aImage',
+		'aButton',
 		'aBlog',
 		'aBlogSingle',
 		'aEvent',
 		'aEventSingle',
-		'aText',		
-		'aRawHTML', 
+		'aText',	
+		'aRawHTML',
+		'aNewRichText'		
 	),
   'type_options' => array(
 		'aRichText' => array('tool' => 'Sidebar'),
