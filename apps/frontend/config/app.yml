@@ -15,6 +15,7 @@ all:
     # new_slots_top: false
     routes_register: false 
     default_on: true
+    pretty_english_dates: true
 
     # Make sure you specify the candidate and sufficient groups for both managing
     # (that is, deleting and creating) and editing pages. It's typical to use the same
