@@ -48,10 +48,12 @@ abstract class BaseaBlogCategoryUser extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('aBlogCategory as BlogCategory', array(
              'local' => 'blog_category_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE'));
 
         $this->hasOne('sfGuardUser as User', array(
              'local' => 'user_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE'));
     }
 }

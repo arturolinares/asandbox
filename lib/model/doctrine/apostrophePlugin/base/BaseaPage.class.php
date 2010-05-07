@@ -83,10 +83,9 @@ abstract class BaseaPage extends sfDoctrineRecord
              'autoincrement' => true,
              'length' => 4,
              ));
-        $this->hasColumn('slug', 'string', 255, array(
+        $this->hasColumn('slug', 'string', 1000, array(
              'type' => 'string',
-             'unique' => true,
-             'length' => 255,
+             'length' => 1000,
              ));
         $this->hasColumn('template', 'string', 100, array(
              'type' => 'string',
@@ -119,7 +118,11 @@ abstract class BaseaPage extends sfDoctrineRecord
         $this->index('slugindex', array(
              'fields' => 
              array(
-              0 => 'slug',
+              'slug' => 
+              array(
+              'length' => 1000,
+              'unique' => true,
+              ),
              ),
              ));
         $this->index('engineindex', array(

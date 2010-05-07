@@ -9,6 +9,7 @@
  * @property integer $author_id
  * @property integer $page_id
  * @property string $title
+ * @property boolean $slug_saved
  * @property string $excerpt
  * @property enum $status
  * @property boolean $allow_comments
@@ -28,6 +29,7 @@
  * @method integer             getAuthorId()           Returns the current record's "author_id" value
  * @method integer             getPageId()             Returns the current record's "page_id" value
  * @method string              getTitle()              Returns the current record's "title" value
+ * @method boolean             getSlugSaved()          Returns the current record's "slug_saved" value
  * @method string              getExcerpt()            Returns the current record's "excerpt" value
  * @method enum                getStatus()             Returns the current record's "status" value
  * @method boolean             getAllowComments()      Returns the current record's "allow_comments" value
@@ -46,6 +48,7 @@
  * @method aBlogItem           setAuthorId()           Sets the current record's "author_id" value
  * @method aBlogItem           setPageId()             Sets the current record's "page_id" value
  * @method aBlogItem           setTitle()              Sets the current record's "title" value
+ * @method aBlogItem           setSlugSaved()          Sets the current record's "slug_saved" value
  * @method aBlogItem           setExcerpt()            Sets the current record's "excerpt" value
  * @method aBlogItem           setStatus()             Sets the current record's "status" value
  * @method aBlogItem           setAllowComments()      Sets the current record's "allow_comments" value
@@ -89,6 +92,10 @@ abstract class BaseaBlogItem extends sfDoctrineRecord
              'type' => 'string',
              'notnull' => true,
              'length' => 255,
+             ));
+        $this->hasColumn('slug_saved', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => false,
              ));
         $this->hasColumn('excerpt', 'string', null, array(
              'type' => 'string',
@@ -176,7 +183,15 @@ abstract class BaseaBlogItem extends sfDoctrineRecord
         $timestampable0 = new Doctrine_Template_Timestampable();
         $taggable0 = new Taggable();
         $sluggable0 = new Doctrine_Template_Sluggable(array(
-             'canUpdate' => true,
+             'fields' => 
+             array(
+              0 => 'title',
+             ),
+             'builder' => 
+             array(
+              0 => 'aTools',
+              1 => 'slugify',
+             ),
              ));
         $this->actAs($timestampable0);
         $this->actAs($taggable0);
