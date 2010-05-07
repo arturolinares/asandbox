@@ -48,10 +48,12 @@ abstract class BaseaBlogEditor extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('aBlogItem as BlogItem', array(
              'local' => 'blog_item_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE'));
 
         $this->hasOne('sfGuardUser as Editor', array(
              'local' => 'user_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'CASCADE'));
     }
 }
