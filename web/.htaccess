@@ -32,3 +32,10 @@ Options +FollowSymLinks +ExecCGI
   # no, so we redirect to our front web controller
   RewriteRule ^(.*)$ index.php [QSA,L]
 </IfModule>
+
+# Apostrophe currently requires this, but don't try to force it on
+# environments that don't have php_value (those environments can
+# still do it in php.ini if they have altered the default)
+<IfModule mod_php5.c>
+	php_value arg_separator.output '&'
+</IfModule>
