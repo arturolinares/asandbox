@@ -26,7 +26,14 @@ all:
     manage_sufficient_group: admin
     edit_candidate_group: editor
     edit_sufficient_group: admin
-
+    # Permission to view locked pages. In our recommended fixtures,
+    # the guest, editor and admin groups have this. Users that have no
+    # group membership do not. If you want to give people "off the street" accounts,
+    # this is a useful way to avoid giving them access to locked pages until they
+    # are deemed worthy of membership in the guest group. If you comment out
+    # this line, any authenticated user will be able to view locked pages
+    view_locked_sufficient_credential: view_locked
+    
     # Sets the level of CMS Pages allowed to be created by the client 
     # (e.g. page_level: 1 means the site can only have pages that are 
     # peers to the homepage peers A.K.A. top navigation pages)
