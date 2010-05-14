@@ -32,7 +32,7 @@ all:
     # this is a useful way to avoid giving them access to locked pages until they
     # are deemed worthy of membership in the guest group. If you comment out
     # this line, any authenticated user will be able to view locked pages
-    view_locked_sufficient_credential: view_locked
+    view_locked_sufficient_credentials: view_locked
     
     # Sets the level of CMS Pages allowed to be created by the client 
     # (e.g. page_level: 1 means the site can only have pages that are 
