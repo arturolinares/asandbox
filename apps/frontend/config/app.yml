@@ -84,8 +84,9 @@ all:
           label: Normal
         imageOnly:
           label: Image Preview
-          force_template: imagePreview
-          full: true
+          options:
+            force_template: imagePreviewTemplate
+            full: true
       aButton:
         normal:
           label: Normal
