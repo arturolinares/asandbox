@@ -79,6 +79,13 @@ all:
       # (This assumes you have implemented such a slot type of course.)
       
     slot_variants:
+      aBlog:
+        normal:
+          label: Normal
+        imageOnly:
+          label: Image Preview
+          force_template: imagePreview
+          full: true
       aButton:
         normal:
           label: Normal
@@ -97,6 +104,7 @@ all:
             interval: 0
             title: true
             arrows: true
+            slideshow_item_template: slideshowItemCompact
         autoplay:
           label: Auto Play
           options:

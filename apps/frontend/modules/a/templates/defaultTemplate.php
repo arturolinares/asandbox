@@ -22,6 +22,7 @@
 <?php // $blogOptions = array('template_options' => array('singleColumnTemplate' => array('subtemplate', 'inDefautlPageBody'))) ?>
 
 <?php $blogOptions = array('subtemplate' => 'inDefaultPageBody') ?>
+<?php $eventOptions = array('subtemplate' => 'inDefaultPageSidebar', ) ?>
 
 <?php a_area('body', array(
 	'allowed_types' => array(
@@ -60,7 +61,9 @@
 		'aRichText', 
 		'aSlideshow', 
 		'aVideo',
-		'aBlog', 		 
+		'aBlog', 
+		'aEvent', 
+		'aEvents',
 		'aImage', 
 		'aFeed', 
 		'aPDF', 
@@ -77,5 +80,7 @@
 		'aImage' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
 		'aFeed' => array(),		
 		'aButton' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
-		'aPDF' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's')		
+		'aPDF' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
+		'aEvents' => $eventOptions,
+		'aEvent' => $eventOptions, 
 	))) ?>
