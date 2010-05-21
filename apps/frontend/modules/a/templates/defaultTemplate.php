@@ -9,6 +9,20 @@
 	<?php endif ?>	
 <?php endif ?>
 
+<?php // Single and multiple blog slots want the same options in this case ?>
+<?php // You can specify separate subtemplates for every blog post template. ?>
+<?php // The subtemplate name is appended to the blog template name, so the ?>
+<?php // partial that gets loaded is _singleColumnTemplate_inDefaultPageBody.php ?>
+<?php // Note that all of your blog templates must live in your override of the ?>
+<?php // aBlog/templates folder ?>
+
+<?php // If you want, you can be explicit about the subtemplate for each ?>
+<?php // blog template: ?>
+
+<?php // $blogOptions = array('template_options' => array('singleColumnTemplate' => array('subtemplate', 'inDefautlPageBody'))) ?>
+
+<?php $blogOptions = array('subtemplate' => 'inDefaultPageBody') ?>
+
 <?php a_area('body', array(
 	'allowed_types' => array(
 		'aRichText', 
@@ -17,11 +31,9 @@
 		'aImage', 
 		'aFeed', 
 		'aPDF',		
-		'aButton',
+		'aButton', 
 		'aBlog',
-		'aBlogSingle',
-		'aEvent',
-		'aEventSingle',
+		'aBlogSingle',		
 		'aText',
 		'aRawHTML',
 	),
@@ -34,8 +46,15 @@
 		'aFeed' => array(),
 		'aButton' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),
 		'aPDF' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),		
+		'aBlog' => $blogOptions,
+		'aBlogSingle' => $blogOptions
 	))) ?>
 	
+<?php // You can also just let the blog post slots display a short excerpt, ?>
+<?php // which is the default behavior. The first image, if any are present, ?>
+<?php // is shown above the excerpt. A "Read More" link is provided to get to ?>
+<?php // the full blog post. ?>
+
 <?php a_area('sidebar', array(
 	'allowed_types' => array(
 		'aRichText', 
@@ -48,8 +67,6 @@
 		'aButton', 
 		'aBlog',
 		'aBlogSingle',
-		'aEvent',
-		'aEventSingle',
 		'aText',
 		'aRawHTML', 		
 	),
@@ -60,5 +77,5 @@
 		'aImage' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
 		'aFeed' => array(),		
 		'aButton' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
-		'aPDF' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),		
+		'aPDF' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's')		
 	))) ?>

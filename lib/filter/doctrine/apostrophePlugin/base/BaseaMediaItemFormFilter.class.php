@@ -6,7 +6,7 @@
  * @package    asandbox
  * @subpackage filter
  * @author     Your name here
- * @version    SVN: $Id: sfDoctrineFormFilterGeneratedTemplate.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
+ * @version    SVN: $Id: sfDoctrineFormFilterGeneratedTemplate.php 29570 2010-05-21 14:49:47Z Kris.Wallsmith $
  */
 abstract class BaseaMediaItemFormFilter extends BaseFormFilterDoctrine
 {
@@ -71,8 +71,10 @@ abstract class BaseaMediaItemFormFilter extends BaseFormFilterDoctrine
       return;
     }
 
-    $query->leftJoin('r.aSlotMediaItem aSlotMediaItem')
-          ->andWhereIn('aSlotMediaItem.slot_id', $values);
+    $query
+      ->leftJoin($query->getRootAlias().'.aSlotMediaItem aSlotMediaItem')
+      ->andWhereIn('aSlotMediaItem.slot_id', $values)
+    ;
   }
 
   public function addMediaCategoriesListColumnQuery(Doctrine_Query $query, $field, $values)
@@ -87,8 +89,10 @@ abstract class BaseaMediaItemFormFilter extends BaseFormFilterDoctrine
       return;
     }
 
-    $query->leftJoin('r.aMediaItemCategory aMediaItemCategory')
-          ->andWhereIn('aMediaItemCategory.media_category_id', $values);
+    $query
+      ->leftJoin($query->getRootAlias().'.aMediaItemCategory aMediaItemCategory')
+      ->andWhereIn('aMediaItemCategory.media_category_id', $values)
+    ;
   }
 
   public function getModelName()
