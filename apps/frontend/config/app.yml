@@ -79,14 +79,15 @@ all:
       # (This assumes you have implemented such a slot type of course.)
       
     slot_variants:
-      aBlog:
-        normal:
-          label: Normal
-        imageOnly:
-          label: Image Preview
-          options:
-            force_template: imagePreviewTemplate
-            full: true
+      # This works, but it's confusing if you don't have a clear need for it, so let's not force a demo of it on folks
+      # aBlog:
+      #   normal:
+      #     label: Normal
+      #   imageOnly:
+      #     label: Image Preview
+      #     options:
+      #       force_template: imagePreviewTemplate
+      #       full: true
       aButton:
         normal:
           label: Normal
