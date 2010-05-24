@@ -21,8 +21,7 @@
 		'aEvent',
 		'aEventSingle',
 		'aText',
-		'aRawHTML',
-		'aNewRichText' 
+		'aRawHTML'
 	),	
   'type_options' => array(
 		'aRichText' => array('tool' => 'Main'), 	

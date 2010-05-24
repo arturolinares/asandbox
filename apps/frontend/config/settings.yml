@@ -47,7 +47,6 @@ all:
       - aMedia
       - aMediaBackend
       - aRichTextSlot
-      - aNewRichTextSlot
       - aTextSlot
       - aRawHTMLSlot
       - aSlideshowSlot
