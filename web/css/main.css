@@ -230,7 +230,35 @@ margin-bottom: 5px;
 	text-decoration: none;
 }
 
+.a-subnav-wrapper.blog h4
+{
+	float: left;
+	width: 100%;
+	clear: both;
+	display: inline;
+	position: relative;
+	font-size: 14px;
+}
 
+.a-subnav-wrapper.blog .a-blog-filter-options
+{
+	float: left;
+	width: 100%;
+	clear: both;
+	display: inline;
+	position: relative;
+	line-height: 20px;
+}
+
+.a-subnav-wrapper.media .a-media-filter-options a,
+.a-subnav-wrapper.blog .a-blog-filter-options a
+{
+	float: left;
+	clear: both;
+	display: inline;
+	width: auto;
+	padding: 0 5px;
+}
 
 /* Breadcrumb Component =========================================== */
 
@@ -294,80 +322,59 @@ margin-bottom: 5px;
 }
 
 
+/* 23. Blog Engine
+-------------------------------------*/
 
-/* Blog Templates =========================================== */
-
-
-.singleColumnTemplate .a-area-blog-body
-{
-width: 680px;
-}
-
-.singleColumnTemplate.inDefaultPageBody .a-area-blog-body
-{
-width: 480px;
-}
-
-.twoColumnTemplate .a-area-blog-body
-{
-width: 480px;
-}
-
-.twoColumnTemplate .a-area-blog-sidebar
-{
-margin-left: 20px;
-width: 180px;
-}
-
-
-.twoColumnTemplate.inDefaultPageBody .a-area-blog-body
-{
-width: 300px;
-}
-
-.twoColumnTemplate.inDefaultPageBody .a-area-blog-sidebar
-{
-margin-left: 20px;
-width: 160px;
-}
-
-
-.singleColumnTemplate.event .a-area-blog-body
-{
-float: right;
-width: 580px;
-}
-
-.singleColumnTemplate.event .a-blog-item-title
-{
-	float: right;
-	margin-left: -120px;
-	width: 580px;
-}
-
-.a-area-sidebar .singleColumnTemplate.event .a-blog-item-meta,
-.singleColumnTemplate.event .a-blog-item-meta
+#a-blog-main,
+.a-blog-item,
+.a-blog-item-title,
+.a-blog-item-meta,
+.a-blog-item-tags,
+.a-blog-item-media,
+.a-blog-item-body,
+.a-blog-item-excerpt-container
 {
 	float: left;
-	width: auto;
-	clear: none;
-	width: 120px;
-	margin-right: 20px;
+	clear: both;
+	display: inline;
+	position: relative;	
+	width: 100%;
 }
 
-.a-area-sidebar .singleColumnTemplate.event .a-blog-item-meta
+.a-blog-item
 {
-	width: 35%;
-	margin-right: 5%;
+	margin: 0 0 20px;
 }
 
-.a-area-sidebar .singleColumnTemplate.event .a-blog-item-title,
-.a-area-sidebar .singleColumnTemplate.event .a-blog-item-media,
-.a-area-sidebar .singleColumnTemplate.event .a-blog-item-excerpt-container
+.a-blog-item .a-area
 {
-	width: 60%;
-	clear: right;
-	float: right;
+	margin-top:0;
+}
+
+.a-blog-item-title,
+.a-blog-item-meta,
+.a-blog-item-tags,
+.a-blog-item-media,
+.a-blog-item-body
+{
+	margin-bottom: 10px;
+}
+
+.a-blog-item-body p
+{
+	margin-bottom: 10px;
+}
+
+.a-blog-item-tags li
+{
+	float: left;
+	margin: 0 5px 0 0;
+}
+
+.a-blog-item-meta
+{
+	font-size: 11px;
+	color: #ccc;
 }
 
 .a-blog-main hr
@@ -424,6 +431,143 @@ width: 580px;
 {
 	margin-top: 5px;
 }
+
+
+
+/* Blog Post Templates =========================================== */
+
+/*  Blog - Single Column */
+
+.post.singleColumnTemplate .a-blog-item-meta
+{
+	margin-top: -5px;
+}
+
+.post.singleColumnTemplate .a-blog-item-meta li
+{
+	float: left;
+	width: auto;
+	clear: none;
+	line-height: 1.2;
+}
+
+.post.singleColumnTemplate .a-blog-item-meta li.author
+{
+	margin-left: 5px;
+	padding-left: 5px;
+	border-left: 1px solid rgba(0,0,0,0.15);
+}
+
+.post.singleColumnTemplate.has-media .a-blog-item-media
+{
+	float: left;
+	clear: none;
+	width: 100px;
+}
+
+.post.singleColumnTemplate.has-media .a-blog-item-excerpt-container
+{
+	float: left;
+	clear: none;
+	margin-left: -100px;
+	width: 100%;
+}
+
+.post.singleColumnTemplate.has-media .a-blog-item-excerpt,
+.post.singleColumnTemplate.has-media .a-blog-read-more
+{
+	float: left;
+	clear: left;
+	margin-left: 110px;
+}
+
+
+.post.singleColumnTemplate .a-area-blog-body
+{
+width: 680px;
+}
+
+/*  Blog - Single Column - Default Page Body Slot */
+
+
+.post.singleColumnTemplate.inDefaultPageBody .a-area-blog-body
+{
+width: 480px;
+}
+
+/*  Blog - Two Column */
+
+
+.post.twoColumnTemplate .a-area-blog-body
+{
+width: 480px;
+}
+
+.post.twoColumnTemplate .a-area-blog-sidebar
+{
+margin-left: 20px;
+width: 180px;
+}
+
+/*  Blog - Two Column - Default Page Body Slot */
+
+
+.post.twoColumnTemplate.inDefaultPageBody .a-area-blog-body
+{
+width: 300px;
+}
+
+.post.twoColumnTemplate.inDefaultPageBody .a-area-blog-sidebar
+{
+margin-left: 20px;
+width: 160px;
+}
+
+/* Event Templates =========================================== */
+
+
+/*  Event - Single Column */
+
+.event.singleColumnTemplate .a-area-blog-body
+{
+float: right;
+width: 580px;
+}
+
+.event.singleColumnTemplate .a-blog-item-title
+{
+	float: right;
+	margin-left: -120px;
+	width: 580px;
+}
+
+/*  Event - *** Single Column styles scoped to the sidebar without a template override */
+
+.a-area-sidebar .event.singleColumnTemplate .a-blog-item-meta,
+.event.singleColumnTemplate .a-blog-item-meta
+{
+	float: left;
+	width: auto;
+	clear: none;
+	width: 120px;
+	margin-right: 20px;
+}
+
+.a-area-sidebar .event.singleColumnTemplate .a-blog-item-meta
+{
+	width: 35%;
+	margin-right: 5%;
+}
+
+.a-area-sidebar .event.singleColumnTemplate .a-blog-item-title,
+.a-area-sidebar .event.singleColumnTemplate .a-blog-item-media,
+.a-area-sidebar .event.singleColumnTemplate .a-blog-item-excerpt-container
+{
+	width: 60%;
+	clear: right;
+	float: right;
+}
+
 
 
 /* Variants =========================================== */
