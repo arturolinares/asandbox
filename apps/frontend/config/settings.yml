@@ -29,7 +29,11 @@ all:
     i18n: on
     rich_text_fck_js_dir:   apostrophePlugin/js/fckeditor
     # Form security secret (CSRF protection)
-    
+
+    # jquery_core: jquery-1.4.2.min.js # incase you want to be awesome    
+    jquery_web_dir: /apostrophePlugin
+    jquery_ui_css: 'ui-apostrophe/jquery-ui-1.7.2.custom.css'
+                
     # On a production site you should obviously change this. But having it not be false is
     # a useful test because it means we'll hear about it if our code isn't compatible with
     # CSRF protection
