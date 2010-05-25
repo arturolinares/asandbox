@@ -9,20 +9,29 @@
 	<?php endif ?>	
 <?php endif ?>
 
-<?php // Single and multiple blog slots want the same options in this case ?>
-<?php // You can specify separate subtemplates for every blog post template. ?>
-<?php // The subtemplate name is appended to the blog template name, so the ?>
-<?php // partial that gets loaded is _singleColumnTemplate_inDefaultPageBody.php ?>
-<?php // Note that all of your blog templates must live in your override of the ?>
-<?php // aBlog/templates folder ?>
+<?php // Let's use variables to avoid passing the same things to two separate slots. These are ?>
+<?php // NOT global variables, just conveniences for this template ?>
 
-<?php // If you want, you can be explicit about the subtemplate for each ?>
-<?php // blog template: ?>
+<?php // By default (no options) blog posts and events display nice little excerpts you can click on to see more ?>
+<?php $blogOptions = array() ?>
+<?php $eventOptions = array() ?>
 
-<?php // $blogOptions = array('template_options' => array('singleColumnTemplate' => array('subtemplate', 'inDefautlPageBody'))) ?>
+<?php // You can use a custom subtemplate to display blog posts and events differently. ?>
+<?php // With tis setting we render _singleColumnTemplate_inDefaultPageBody.php, etc. (the blog post template ?>
+<?php // plus the subtemplate creates the full partial name). These go in your app level overrides of aBlog/templates and ?>
+<?php // aEvent/templates ?>
 
-<?php $blogOptions = array('subtemplate' => 'inDefaultPageBody') ?>
-<?php $eventOptions = array('subtemplate' => 'inDefaultPageSidebar', ) ?>
+<?php // $blogOptions = array('subtemplate' => 'inDefaultPageBody') ?>
+<?php // $eventOptions = array('subtemplate' => 'inDefaultPageSidebar') ?>
+
+<?php // You can also specify separate subtemplates for every blog post template individually ?>
+<?php // $blogOptions = array('template_options' => array('singleColumnTemplate' => array('subtemplate' => 'inDefautlPageBody'))) ?>
+
+<?php // And you can just force the use of a different blog post template (only makes sense if ?>
+<?php // you purposely design one to be the superset of another with the same area names). Usually you ?>
+<?php // don't mix this with subtemplate, but you can ?>
+
+<?php // $blogOptions = array('template' => 'myOwnTemplate') ?>
 
 <?php a_area('body', array(
 	'allowed_types' => array(
