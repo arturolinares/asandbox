@@ -111,6 +111,7 @@ all:
             interval: 4
             title: true
             arrows: false         
+            slideshow_item_template: slideshowItemCompact            
             
     home_as_tab: false
 
