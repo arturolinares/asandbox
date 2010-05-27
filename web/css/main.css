@@ -318,9 +318,15 @@ margin-bottom: 5px;
 .a-blog-item-meta,
 .a-blog-item-tags,
 .a-blog-item-media,
-.a-blog-item-body
+.a-blog-item-body,
+.a-blog-item-excerpt
 {
 	margin-bottom: 10px;
+}
+
+.a-blog-item-excerpt-container
+{
+	margin-bottom:20px;
 }
 
 .a-blog-item-body p
