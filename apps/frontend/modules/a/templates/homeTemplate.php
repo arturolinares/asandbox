@@ -2,6 +2,11 @@
 
 <?php slot('body_class') ?>a-home<?php end_slot() ?>
 
+<?php $blogOptions = array('slideshowOptions' => array('width' => 360, 'height' => 220,  )) ?>
+<?php $eventOptions = array('slideshowOptions' => array('width' => 360, 'height' => 220,  )) ?>
+<?php $blogCompactOptions = array('excerptLength' => 40, 'slideshowOptions' => array('width' => 200, 'height' => 130,  ))  ?>
+<?php $eventCompactOptions = array('excerptLength' => 40, 'slideshowOptions' => array('width' => 120, )) ?>
+
 <?php // Breadcrumb is removed for the home page template because it is redundant ?>
 <?php slot('a-breadcrumb', '') ?>
 
@@ -12,16 +17,17 @@
 	'allowed_types' => array(
 		'aRichText', 
 		'aSlideshow', 
-		'aVideo', 
-		'aImage',
-		'aFeed', 
-		'aButton', 
+		'aVideo',
 		'aBlog',
-		'aBlogSingle',
 		'aEvent',
-		'aEventSingle',
-		'aText',
-		'aRawHTML'
+		'aImage', 
+		'aFeed', 
+		'aPDF',
+		'aBlogSingle', 
+		'aEventSingle',		
+		'aButton', 
+		'aText',	  
+		'aRawHTML',
 	),	
   'type_options' => array(
 		'aRichText' => array('tool' => 'Main'), 	
@@ -29,25 +35,27 @@
 		'aVideo' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),
 		'aImage' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),
 		'aButton' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),
-		'aBlog' => array('slideshowOptions' => array('width' => 100, 'height' => 100)), 
+		'aBlog' => $blogOptions,
+		'aBlogSingle' => $blogOptions,
+		'aEvent' => $eventOptions,
+		'aEventSingle' => $eventOptions, 
 	))) ?>
 
 <?php a_area('sidebar', array(
-	'allowed_types' => array(
-		'aRichText',
-		'aSlideshow',
+		'allowed_types' => array(
+		'aRichText', 
+		'aSlideshow', 
 		'aVideo',
-		'aPDF',
-		'aFeed',
-		'aImage',
-		'aButton',
 		'aBlog',
-		'aBlogSingle',
 		'aEvent',
+		'aImage', 
+		'aFeed', 
+		'aPDF', 
+		'aBlogSingle', 
 		'aEventSingle',
-		'aText',	
-		'aRawHTML',
-		'aNewRichText'		
+		'aButton', 
+		'aText',
+		'aRawHTML',	
 	),
   'type_options' => array(
 		'aRichText' => array('tool' => 'Sidebar'),
@@ -56,5 +64,9 @@
 		'aImage' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
 		'aFeed' => array(),
 		'aButton' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
-		'aPDF' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),		
+		'aPDF' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
+		'aEvents' => $eventCompactOptions,
+		'aEvent' => $eventCompactOptions,
+		'aBlog' => $blogCompactOptions,
+		'aBlogSingle' => $blogCompactOptions		
 	))) ?>

@@ -13,8 +13,10 @@
 <?php // NOT global variables, just conveniences for this template ?>
 
 <?php // By default (no options) blog posts and events display nice little excerpts you can click on to see more ?>
-<?php $blogOptions = array() ?>
-<?php $eventOptions = array() ?>
+<?php $blogOptions = array('slideshowOptions' => array('width' => 480, 'height' => 320,  )) ?>
+<?php $eventOptions = array('slideshowOptions' => array('width' => 340, 'height' => 220,  )) ?>
+<?php $blogCompactOptions = array('excerptLength' => 40, 'slideshowOptions' => array('width' => 200, 'height' => 130,  ))  ?>
+<?php $eventCompactOptions = array('excerptLength' => 40, 'slideshowOptions' => array('width' => 120, )) ?>
 
 <?php // You can use a custom subtemplate to display blog posts and events differently. ?>
 <?php // With tis setting we render _singleColumnTemplate_inDefaultPageBody.php, etc. (the blog post template ?>
@@ -37,14 +39,16 @@
 	'allowed_types' => array(
 		'aRichText', 
 		'aSlideshow', 
-		'aVideo', 
+		'aVideo',
+		'aBlog',
+		'aEvent',
 		'aImage', 
 		'aFeed', 
-		'aPDF',		
+		'aPDF',
+		'aBlogSingle', 
+		'aEventSingle',		
 		'aButton', 
-		'aBlog',
-		'aBlogSingle',		
-		'aText',
+		'aText',	  
 		'aRawHTML',
 	),
   'type_options' => array(
@@ -57,7 +61,9 @@
 		'aButton' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),
 		'aPDF' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),		
 		'aBlog' => $blogOptions,
-		'aBlogSingle' => $blogOptions
+		'aBlogSingle' => $blogOptions,
+		'aEvent' => $eventOptions,
+		'aEventSingle' => $eventOptions,
 	))) ?>
 	
 <?php // You can also just let the blog post slots display a short excerpt, ?>
@@ -70,15 +76,14 @@
 		'aRichText', 
 		'aSlideshow', 
 		'aVideo',
-		'aBlog', 
-		'aEvent', 
-		'aEvents',
+		'aBlog',
+		'aEvent',
 		'aImage', 
 		'aFeed', 
 		'aPDF', 
+		'aBlogSingle', 
+		'aEventSingle',
 		'aButton', 
-		'aBlog',
-		'aBlogSingle',
 		'aText',
 		'aRawHTML', 		
 	),
@@ -90,6 +95,8 @@
 		'aFeed' => array(),		
 		'aButton' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
 		'aPDF' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
-		'aEvents' => $eventOptions,
-		'aEvent' => $eventOptions, 
+		'aEvents' => $eventCompactOptions,
+		'aEvent' => $eventCompactOptions,
+		'aBlog' => $blogCompactOptions,
+		'aBlogSingle' => $blogCompactOptions
 	))) ?>
