@@ -147,16 +147,6 @@ all:
       - 'aPage'
       - 'aMediaItem'
       
-  aBlog:
-    # Dimensions for media slideshows on Blog IndexSuccess
-    post_list_slideshow_width: 720
-    post_list_slideshow_height: 220   
-    
-  aCalendar:
-    # Dimensions for media slideshows on Calendar IndexSuccess    
-    event_list_slideshow_width: 180
-    event_list_slideshow_height: 160   
-  
   # options for sfSyncContentPlugin, used to sync the database and also
   # data files such as the media plugin's images and the search indexes. 
   # You can extend this if you have more data file folders
