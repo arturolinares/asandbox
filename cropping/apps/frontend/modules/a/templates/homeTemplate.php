@@ -31,11 +31,10 @@
 	),	
   'type_options' => array(
 		'aRichText' => array('tool' => 'Main'), 	
-		'aSlideshow' => array("width" => 720, "height" => 360, 'resizeType' => 'c'),
+		'aSlideshow' => array("width" => 720, "height" => 360, 'resizeType' => 'c', "constraints" => array("aspect-width" => 720, "aspect-height" => 360)),
 		'aVideo' => array("width" => 720, "height" => 360, 'resizeType' => 'c'),
 		'aImage' => array("width" => 720, "height" => 360, 'resizeType' => 'c'),
 		'aButton' => array("width" => 720, "height" => 360, 'resizeType' => 'c'),
-		
 		'aBlog' => $blogOptions,
 		'aBlogSingle' => $blogOptions,
 		'aEvent' => $eventOptions,
