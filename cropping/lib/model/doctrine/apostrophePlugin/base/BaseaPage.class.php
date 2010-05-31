@@ -67,7 +67,7 @@
  * @method aPage               setAMediaPageCategory() Sets the current record's "aMediaPageCategory" collection
  * @method aPage               setARedirect()          Sets the current record's "aRedirect" collection
  * 
- * @package    cropping
+ * @package    symfony
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $

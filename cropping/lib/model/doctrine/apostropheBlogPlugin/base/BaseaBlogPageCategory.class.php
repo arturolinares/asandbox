@@ -19,7 +19,7 @@
  * @method aBlogPageCategory setABlogCategory()    Sets the current record's "aBlogCategory" value
  * @method aBlogPageCategory setAPage()            Sets the current record's "aPage" value
  * 
- * @package    cropping
+ * @package    symfony
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $

@@ -1,0 +1,3 @@
+all:
+  javascripts: [/apostrophePlugin/js/plugins/jquery.Jcrop.min.js]
+  stylesheets: [/apostrophePlugin/css/jquery.Jcrop.css]

@@ -140,7 +140,12 @@ all:
     admin_credential: media_admin
     upload_credential: media_upload
     use_bundled_layout: false
-    embed_codes: true        
+    embed_codes: true
+    selected_constraints:
+      width: 200
+      resizeType: s
+      flexHeight: true
+      height: false
     
   aToolkit:
     indexes:
