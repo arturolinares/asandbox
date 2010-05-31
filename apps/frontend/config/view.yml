@@ -10,7 +10,7 @@ default:
     #robots:       index, follow
 
   stylesheets:    
-    - main.css
+    - main.css: { position: last }
   
   javascripts:
 
