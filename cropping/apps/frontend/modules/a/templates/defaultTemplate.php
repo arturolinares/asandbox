@@ -54,7 +54,7 @@
   'type_options' => array(
     'aText' => array('multiline' => true),
 		'aRichText' => array('tool' => 'Main'), 	
-		'aSlideshow' => array("width" => 480, "flexHeight" => true),
+		'aSlideshow' => array("width" => 480, "flexHeight" => true, "constraints" => array("aspect-width" => 480, "aspect-height" => 200)),
 		'aVideo' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),		
 		'aImage' => array('width' => 480, 'flexHeight' => true, 'resizeType' => 's'),
 		'aFeed' => array(),

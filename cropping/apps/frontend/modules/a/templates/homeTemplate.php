@@ -59,7 +59,7 @@
 	),
   'type_options' => array(
 		'aRichText' => array('tool' => 'Sidebar'),
-		'aSlideshow' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
+		'aSlideshow' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's', 'constraints' => array('aspect-width' => 200, 'aspect-height' => 125)),
 		'aVideo' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),		
 		'aImage' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
 		'aFeed' => array(),
