@@ -1,0 +1,69 @@
+# default values
+all:
+  a:
+    engines:
+      '': 'Template-Based'
+      aMedia: 'Media'
+    
+    # By default new slots in an area go to the top, you can change that here
+    # new_slots_top: false
+    routes_register: false 
+    default_on: true
+    edit_candidate_group: editor
+    edit_sufficient_group: admin
+          
+    slot_types:
+      # aRawHTML: HTML
+      aImage: Image
+      aButton: Button
+      aPDF: PDF
+      aSlideshow: Slideshow
+      aVideo: Video
+    home_as_tab: false
+    templates:
+      home: Home Page
+      default: Default Page
+    # We're using it as the sitewide layout instead (see view.yml)
+    use_bundled_layout: false   
+  aMedia:
+    # If not set, the same site is assumed
+    # client_site: "http://www.mymediasite.com/"
+    # You should change this both here and below
+    client_apikey: 'dummy'
+    apikeys:
+      - 'dummy'
+    apipublic: false
+    admin_credential: media_admin
+    upload_credential: media_upload
+    use_bundled_layout: false
+  aToolkit:
+    indexes:
+      - 'aPage'
+      - 'aMediaItem'
+  
+  # options for sfSyncContentPlugin, used to sync the database and also
+  # data files such as the media plugin's images and the search indexes. 
+  # You can extend this if you have more data file folders
+  
+  sfSyncContent:
+    # The database is content, of course, but what else?
+    content:
+      # Almost always
+      - "web/uploads"
+      # If you use P'unk Avenue stuff
+      - "data/a_writable"
+        
+  # For us this is the right place to find the netpbm utilities and ghostscript 
+  # (pnmtopng, gs, etc). Change it if your environment differs. Note that the
+  # default PATH is still searched too, so on most production servers you can 
+  # leave this setting alone and not break it out separately for prod
+      
+  aimageconverter:
+    path: /opt/local/bin
+
+  # You need to set this to your site's hostname to use a:refresh to update
+  # URLs in media slots etc
+  
+#  cli:
+#    host: cmstest14
+    

@@ -1,0 +1,7 @@
+.svn
+/web/uploads/*
+/cache/*
+/log/*
+/web/*_dev.php
+/config/require-core.php
+/data/a_writable/*
