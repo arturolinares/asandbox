@@ -5,7 +5,7 @@
  *
  * @method aBlogItemCategory getObject() Returns the current form's model object
  *
- * @package    asandbox
+ * @package    cropping
  * @subpackage form
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
@@ -20,8 +20,8 @@ abstract class BaseaBlogItemCategoryForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'blog_item_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'blog_item_id', 'required' => false)),
-      'blog_category_id' => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'blog_category_id', 'required' => false)),
+      'blog_item_id'     => new sfValidatorChoice(array('choices' => array($this->getObject()->get('blog_item_id')), 'empty_value' => $this->getObject()->get('blog_item_id'), 'required' => false)),
+      'blog_category_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('blog_category_id')), 'empty_value' => $this->getObject()->get('blog_category_id'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('a_blog_item_category[%s]');
