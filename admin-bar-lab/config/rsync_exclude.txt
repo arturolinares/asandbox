@@ -1,0 +1,10 @@
+.svn
+/web/uploads/*
+/cache/*
+/log/*
+/web/*_dev.php
+/config/require-core.php
+/data/a_writable/*
+# Separate version on the server allows both prod and dev to be tested locally with the
+# local one. Neither version is checked into svn for security reasons since this is a public repo
+/config/databases.yml
