@@ -5,10 +5,10 @@
  *
  * @method aMediaItem getObject() Returns the current form's model object
  *
- * @package    asandbox
+ * @package    symfony
  * @subpackage form
  * @author     Your name here
- * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
+ * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
 abstract class BaseaMediaItemForm extends BaseFormDoctrine
 {
@@ -35,7 +35,7 @@ abstract class BaseaMediaItemForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'id'                    => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'id', 'required' => false)),
+      'id'                    => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'type'                  => new sfValidatorChoice(array('choices' => array(0 => 'image', 1 => 'video', 2 => 'audio', 3 => 'pdf'))),
       'service_url'           => new sfValidatorString(array('max_length' => 200, 'required' => false)),
       'format'                => new sfValidatorString(array('max_length' => 10, 'required' => false)),

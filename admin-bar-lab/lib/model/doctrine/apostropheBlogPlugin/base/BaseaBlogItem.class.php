@@ -16,8 +16,8 @@
  * @property string $template
  * @property timestamp $published_at
  * @property string $type
- * @property datetime $start_date
- * @property datetime $end_date
+ * @property timestamp $start_date
+ * @property timestamp $end_date
  * @property sfGuardUser $Author
  * @property Doctrine_Collection $Editors
  * @property aPage $Page
@@ -36,8 +36,8 @@
  * @method string              getTemplate()           Returns the current record's "template" value
  * @method timestamp           getPublishedAt()        Returns the current record's "published_at" value
  * @method string              getType()               Returns the current record's "type" value
- * @method datetime            getStartDate()          Returns the current record's "start_date" value
- * @method datetime            getEndDate()            Returns the current record's "end_date" value
+ * @method timestamp           getStartDate()          Returns the current record's "start_date" value
+ * @method timestamp           getEndDate()            Returns the current record's "end_date" value
  * @method sfGuardUser         getAuthor()             Returns the current record's "Author" value
  * @method Doctrine_Collection getEditors()            Returns the current record's "Editors" collection
  * @method aPage               getPage()               Returns the current record's "Page" value
@@ -64,7 +64,7 @@
  * @method aBlogItem           setBlogItemEditors()    Sets the current record's "BlogItemEditors" collection
  * @method aBlogItem           setBlogItemCategories() Sets the current record's "BlogItemCategories" collection
  * 
- * @package    asandbox
+ * @package    symfony
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
@@ -128,11 +128,11 @@ abstract class BaseaBlogItem extends sfDoctrineRecord
              'type' => 'string',
              'length' => 255,
              ));
-        $this->hasColumn('start_date', 'datetime', null, array(
-             'type' => 'datetime',
+        $this->hasColumn('start_date', 'timestamp', null, array(
+             'type' => 'timestamp',
              ));
-        $this->hasColumn('end_date', 'datetime', null, array(
-             'type' => 'datetime',
+        $this->hasColumn('end_date', 'timestamp', null, array(
+             'type' => 'timestamp',
              ));
 
         $this->option('type', 'INNODB');

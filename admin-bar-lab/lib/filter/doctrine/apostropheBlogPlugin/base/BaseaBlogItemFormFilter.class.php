@@ -3,10 +3,10 @@
 /**
  * aBlogItem filter form base class.
  *
- * @package    asandbox
+ * @package    symfony
  * @subpackage filter
  * @author     Your name here
- * @version    SVN: $Id: sfDoctrineFormFilterGeneratedTemplate.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
+ * @version    SVN: $Id: sfDoctrineFormFilterGeneratedTemplate.php 29570 2010-05-21 14:49:47Z Kris.Wallsmith $
  */
 abstract class BaseaBlogItemFormFilter extends BaseFormFilterDoctrine
 {
@@ -73,8 +73,10 @@ abstract class BaseaBlogItemFormFilter extends BaseFormFilterDoctrine
       return;
     }
 
-    $query->leftJoin('r.aBlogEditor aBlogEditor')
-          ->andWhereIn('aBlogEditor.user_id', $values);
+    $query
+      ->leftJoin($query->getRootAlias().'.aBlogEditor aBlogEditor')
+      ->andWhereIn('aBlogEditor.user_id', $values)
+    ;
   }
 
   public function addCategoriesListColumnQuery(Doctrine_Query $query, $field, $values)
@@ -89,8 +91,10 @@ abstract class BaseaBlogItemFormFilter extends BaseFormFilterDoctrine
       return;
     }
 
-    $query->leftJoin('r.aBlogItemCategory aBlogItemCategory')
-          ->andWhereIn('aBlogItemCategory.blog_category_id', $values);
+    $query
+      ->leftJoin($query->getRootAlias().'.aBlogItemCategory aBlogItemCategory')
+      ->andWhereIn('aBlogItemCategory.blog_category_id', $values)
+    ;
   }
 
   public function getModelName()

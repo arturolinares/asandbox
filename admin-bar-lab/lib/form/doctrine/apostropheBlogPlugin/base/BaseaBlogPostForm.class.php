@@ -5,10 +5,10 @@
  *
  * @method aBlogPost getObject() Returns the current form's model object
  *
- * @package    asandbox
+ * @package    symfony
  * @subpackage form
  * @author     Your name here
- * @version    SVN: $Id: sfDoctrineFormGeneratedInheritanceTemplate.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
+ * @version    SVN: $Id: sfDoctrineFormGeneratedInheritanceTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
 abstract class BaseaBlogPostForm extends aBlogItemForm
 {

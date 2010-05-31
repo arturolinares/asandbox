@@ -5,10 +5,10 @@
  *
  * @method aBlogItem getObject() Returns the current form's model object
  *
- * @package    asandbox
+ * @package    symfony
  * @subpackage form
  * @author     Your name here
- * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
+ * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
 abstract class BaseaBlogItemForm extends BaseFormDoctrine
 {
@@ -26,8 +26,8 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
       'template'        => new sfWidgetFormInputText(),
       'published_at'    => new sfWidgetFormDateTime(),
       'type'            => new sfWidgetFormInputText(),
-      'start_date'      => new sfWidgetFormInputText(),
-      'end_date'        => new sfWidgetFormInputText(),
+      'start_date'      => new sfWidgetFormDateTime(),
+      'end_date'        => new sfWidgetFormDateTime(),
       'created_at'      => new sfWidgetFormDateTime(),
       'updated_at'      => new sfWidgetFormDateTime(),
       'slug'            => new sfWidgetFormInputText(),
@@ -36,7 +36,7 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'id'              => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'id', 'required' => false)),
+      'id'              => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'author_id'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Author'), 'required' => false)),
       'page_id'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Page'), 'required' => false)),
       'title'           => new sfValidatorString(array('max_length' => 255)),
@@ -47,8 +47,8 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
       'template'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'published_at'    => new sfValidatorDateTime(array('required' => false)),
       'type'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'start_date'      => new sfValidatorPass(array('required' => false)),
-      'end_date'        => new sfValidatorPass(array('required' => false)),
+      'start_date'      => new sfValidatorDateTime(array('required' => false)),
+      'end_date'        => new sfValidatorDateTime(array('required' => false)),
       'created_at'      => new sfValidatorDateTime(),
       'updated_at'      => new sfValidatorDateTime(),
       'slug'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
