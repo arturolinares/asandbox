@@ -20,8 +20,8 @@ abstract class BaseaBlogEditorForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'blog_item_id' => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'blog_item_id', 'required' => false)),
-      'user_id'      => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'user_id', 'required' => false)),
+      'blog_item_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('blog_item_id')), 'empty_value' => $this->getObject()->get('blog_item_id'), 'required' => false)),
+      'user_id'      => new sfValidatorChoice(array('choices' => array($this->getObject()->get('user_id')), 'empty_value' => $this->getObject()->get('user_id'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('a_blog_editor[%s]');
