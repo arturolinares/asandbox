@@ -34,7 +34,7 @@ abstract class BaseaPageForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'id'                    => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'id', 'required' => false)),
+      'id'                    => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'slug'                  => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
       'template'              => new sfValidatorString(array('max_length' => 100, 'required' => false)),
       'view_is_secure'        => new sfValidatorBoolean(array('required' => false)),

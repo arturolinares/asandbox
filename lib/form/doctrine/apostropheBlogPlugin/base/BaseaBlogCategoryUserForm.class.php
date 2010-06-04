@@ -20,8 +20,8 @@ abstract class BaseaBlogCategoryUserForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'blog_category_id' => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'blog_category_id', 'required' => false)),
-      'user_id'          => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'user_id', 'required' => false)),
+      'blog_category_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('blog_category_id')), 'empty_value' => $this->getObject()->get('blog_category_id'), 'required' => false)),
+      'user_id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('user_id')), 'empty_value' => $this->getObject()->get('user_id'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('a_blog_category_user[%s]');
