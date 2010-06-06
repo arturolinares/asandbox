@@ -112,7 +112,20 @@ all:
             title: true
             arrows: false         
             itemTemplate: slideshowItemCompact            
-            
+    
+    # By leaving this option empty, we forbid the use of slot variants without an
+    # explicit allowed_variants setting in a particular a_slot or a_area call.
+    # You can comment out this line to allow all variants for a slot to be used
+    # by default where allowed_variants is not specified. You can also provide a
+    # list of allowed variants here for each slot type:
+    #
+    # allowed_slot_variants:
+    #   aButton:
+    #     - normal
+    #     - useTitleAsButtonText
+    
+    allowed_slot_variants:
+      
     home_as_tab: false
 
     templates:
