@@ -9,8 +9,6 @@
 	<?php endif ?>	
 <?php endif ?>
 
-<?php slot('a-search') ?><?php end_slot() ?>
-
 <?php // Let's use variables to avoid passing the same things to two separate slots. These are ?>
 <?php // NOT global variables, just conveniences for this template ?>
 

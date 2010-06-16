@@ -131,7 +131,6 @@ all:
     templates:
       home: Home Page
       default: Default Page
-      
     # We're using it as the sitewide layout instead (see view.yml)
     use_bundled_layout: false   
     engines:
@@ -188,4 +187,3 @@ all:
   
 #  cli:
 #    host: cmstest14
-    
