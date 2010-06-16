@@ -11,7 +11,7 @@ default:
 
   stylesheets:    
     - main.css: { position: last }
-  
+
   javascripts:
 
   has_layout:     true
