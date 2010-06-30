@@ -122,10 +122,6 @@ abstract class BaseaSlot extends sfDoctrineRecord
              array(
               'type' => 'aNewRichText',
              ),
-             'customNewsSlot' => 
-             array(
-              'type' => 'customNews',
-             ),
              ));
     }
 

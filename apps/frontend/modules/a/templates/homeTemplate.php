@@ -1,6 +1,6 @@
 	<?php use_helper('a') ?>
 
-<?php slot('body_class') ?>a-home<?php end_slot() ?>
+<?php slot('body_class') ?>a-home alt<?php end_slot() ?>
 
 <?php $blogOptions = array('slideshowOptions' => array('width' => 360, 'height' => 220,  )) ?>
 <?php $eventOptions = array('slideshowOptions' => array('width' => 360, 'height' => 220,  )) ?>
@@ -31,10 +31,10 @@
 	),	
   'type_options' => array(
 		'aRichText' => array('tool' => 'Main'), 	
-		'aSlideshow' => array("width" => 720, "flexHeight" => true, 'resizeType' => 's'),
-		'aVideo' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),
-		'aImage' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),
-		'aButton' => array('width' => 720, 'flexHeight' => true, 'resizeType' => 's'),
+		'aSlideshow' => array("width" => 960, "flexHeight" => true, 'resizeType' => 's'),
+		'aVideo' => array('width' => 960, 'flexHeight' => true, 'resizeType' => 's'),
+		'aImage' => array('width' => 960, 'flexHeight' => true, 'resizeType' => 's'),
+		'aButton' => array('width' => 960, 'flexHeight' => true, 'resizeType' => 's'),
 		'aBlog' => $blogOptions,
 		'aBlogSingle' => $blogOptions,
 		'aEvent' => $eventOptions,
@@ -70,3 +70,7 @@
 		'aBlog' => $blogCompactOptions,
 		'aBlogSingle' => $blogCompactOptions		
 	))) ?>
+	
+	<?php a_slot('news', 'aBlog')?>
+	
+		<?php a_slot('events', 'aEvent')?>
