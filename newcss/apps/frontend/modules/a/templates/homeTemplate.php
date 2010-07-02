@@ -2,11 +2,6 @@
 
 <?php slot('body_class') ?>a-home alt<?php end_slot() ?>
 
-<?php $blogOptions = array('slideshowOptions' => array('width' => 360, 'height' => 220,  )) ?>
-<?php $eventOptions = array('slideshowOptions' => array('width' => 360, 'height' => 220,  )) ?>
-<?php $blogCompactOptions = array('excerptLength' => 40, 'slideshowOptions' => array('width' => 200, 'height' => 130,  ))  ?>
-<?php $eventCompactOptions = array('excerptLength' => 40, 'slideshowOptions' => array('width' => 120, )) ?>
-
 <?php // Breadcrumb is removed for the home page template because it is redundant ?>
 <?php slot('a-breadcrumb', '') ?>
 
@@ -18,13 +13,9 @@
 		'aRichText', 
 		'aSlideshow', 
 		'aVideo',
-		'aBlog',
-		'aEvent',
 		'aImage', 
 		'aFeed', 
 		'aPDF',
-		'aBlogSingle', 
-		'aEventSingle',		
 		'aButton', 
 		'aText',	  
 		'aRawHTML',
@@ -35,10 +26,6 @@
 		'aVideo' => array('width' => 960, 'flexHeight' => true, 'resizeType' => 's'),
 		'aImage' => array('width' => 960, 'flexHeight' => true, 'resizeType' => 's'),
 		'aButton' => array('width' => 960, 'flexHeight' => true, 'resizeType' => 's'),
-		'aBlog' => $blogOptions,
-		'aBlogSingle' => $blogOptions,
-		'aEvent' => $eventOptions,
-		'aEventSingle' => $eventOptions, 
 	))) ?>
 
 <?php a_area('sidebar', array(
@@ -46,13 +33,9 @@
 		'aRichText', 
 		'aSlideshow', 
 		'aVideo',
-		'aBlog',
-		'aEvent',
 		'aImage', 
 		'aFeed', 
 		'aPDF', 
-		'aBlogSingle', 
-		'aEventSingle',
 		'aButton', 
 		'aText',
 		'aRawHTML',	
@@ -65,12 +48,4 @@
 		'aFeed' => array(),
 		'aButton' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
 		'aPDF' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
-		'aEvents' => $eventCompactOptions,
-		'aEvent' => $eventCompactOptions,
-		'aBlog' => $blogCompactOptions,
-		'aBlogSingle' => $blogCompactOptions		
 	))) ?>
-	
-	<?php a_slot('news', 'aBlog')?>
-	
-		<?php a_slot('events', 'aEvent')?>
