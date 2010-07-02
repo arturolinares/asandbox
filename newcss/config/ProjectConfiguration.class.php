@@ -26,7 +26,19 @@ class ProjectConfiguration extends sfProjectConfiguration
     set_include_path(
       sfConfig::get('sf_lib_dir') .
         '/vendor' . PATH_SEPARATOR . get_include_path());
-    // for compatibility / remove and enable only the plugins you want
-    $this->enableAllPluginsExcept(array('sfPropelPlugin'));
+    // Don't use enableAllPluginsExcept, it is a deprecated backwards compatibility hack
+    // and doesn't allow you to resolve order dependencies
+    $this->enablePlugins(array(
+      'sfDoctrinePlugin',
+      'apostrophePlugin',
+      'apostropheBlogPlugin',
+      'sfJqueryReloadedPlugin',
+      'sfSyncContentPlugin',
+      'sfDoctrineActAsTaggablePlugin',
+      'sfTaskExtraPlugin',
+      'sfDoctrineGuardPlugin',
+      'sfWebBrowserPlugin',
+      'sfFeed2Plugin'
+    ));
   }
 }
