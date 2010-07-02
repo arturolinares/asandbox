@@ -1,61 +1,74 @@
-/* aSandbox Defaul CSS */
-
-
+/* aSandbox Default CSS */
 
 
 /* Basic Elements =========================================== */
 
-h1
+html, body { height: 100%; }
+
+body { font: 12px/1.4 arial, sans-serif; color: #333; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.2; }
+
+p { line-height: 1.4; }
+
+input[type="checkbox"],
+input[type="radio"]
 {
-	font-size: 30px;
+	width: auto !important;
+	border: none !important;
 }
 
-h2
+object { float: left; clear: both; }
+
+br.c { background: none; border: 0; clear: both; display: block; float: none; font-size: 0px; margin: 0; padding: 0; visibility: hidden; width: 0; height: 0; line-height: 0;}
+
+h1 { font-size: 30px; }
+
+h2 { font-size: 24px;	margin: 0 0 10px 0; }
+
+h3 { font-size: 18px;	color: #666; }
+
+h4, h5, h6 { font-size: 14px; color: #666; }
+
+a { text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+
+
+
+
+/* 4. Basic Global Layout
+-------------------------------------*/
+
+#a-wrapper
 {
-	font-size: 24px;
-	margin: 0 0 10px 0;
+width: 960px;
+margin: 0 auto;
 }
-
-h3
-{
-	font-size: 18px;
-	color: #666;
-}
-
-h4,
-h5,
-h6
-{
-	font-size: 14px;
-	color: #666;
-}
-
-br.c
-{
-	clear: both;
-	margin: 10px 0;
-}
-
-a
-{
-	text-decoration: none;
-}
-
-a:hover
-{
-	text-decoration: underline;
-}
-
-
-
-
-
-/* Basic Layout =========================================== */
 
 #a-header
 {
-	width: 540px;
+display: inline;
+position: relative;
+width: 540px;
+clear: none;
+}
+
+#a-content
+{
+	float: left;
+	position: relative;
+	display: inline;
 	clear: none;
+	width: 720px;
+}
+
+.a-area-footer
+{
+	position: relative;
+	display: inline;
+	clear: both;
 }
 
 #a-search
@@ -92,12 +105,22 @@ a:hover
 	width: 50%;
 }
 
+.a-default #a-content
+{
+clear: none;
+float: left;
+width: auto;
+}
+
+.a-default .a-area-body
+{
+width: 480px;
+}
+
 .a-area-body
 {
 	width:480px;
 	float:left;
-	display:inline;
-	position:relative;
 }
 
 .a-home .a-area-body
