@@ -1,6 +1,9 @@
 # default values
 all:
   a:
+    # includes a.css into the project
+    use_bundled_stylesheet: true
+    
     # default button order for P'unk Projects
     global_button_order:
       - blog
