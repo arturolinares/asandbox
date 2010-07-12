@@ -62,22 +62,6 @@ abstract class BaseaSlot extends sfDoctrineRecord
              ));
 
         $this->setSubClasses(array(
-             'aBlogSlot' => 
-             array(
-              'type' => 'aBlog',
-             ),
-             'aBlogSingleSlot' => 
-             array(
-              'type' => 'aBlogSingle',
-             ),
-             'aEventSlot' => 
-             array(
-              'type' => 'aEvent',
-             ),
-             'aEventSingleSlot' => 
-             array(
-              'type' => 'aEventSingle',
-             ),
              'aTextSlot' => 
              array(
               'type' => 'aText',
@@ -121,6 +105,22 @@ abstract class BaseaSlot extends sfDoctrineRecord
              'aNewRichTextSlot' => 
              array(
               'type' => 'aNewRichText',
+             ),
+             'aBlogSlot' => 
+             array(
+              'type' => 'aBlog',
+             ),
+             'aBlogSingleSlot' => 
+             array(
+              'type' => 'aBlogSingle',
+             ),
+             'aEventSlot' => 
+             array(
+              'type' => 'aEvent',
+             ),
+             'aEventSingleSlot' => 
+             array(
+              'type' => 'aEventSingle',
              ),
              ));
     }

@@ -1,5 +1,18 @@
+# Two users by default: a superadmin (we suggest reserving this account for developer use and
+# removing it at production launch) and an admin (a member of the admin group). We suggest
+# giving the latter account to the client. Out of the box, Apostrophe's group 
+# dashboard isn't of much use to a client admin (it will be in 1.5) and the permissions 
+# dashboard is just plain dangerous, so we show only the users dashboard to regular admins
+
 sfGuardUser:
+  sgu_superadmin:
+    username: superadmin
+    password: demo
+    is_super_admin: true
   sgu_admin:
     username: admin
     password: demo
-    is_super_admin: true
+sfGuardUserGroup:
+  sgug_admin_admin:
+    sfGuardUser: sgu_admin
+    sfGuardGroup: sfGuardGroup_admin
