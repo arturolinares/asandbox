@@ -31,7 +31,8 @@
 	),	
   'type_options' => array(
 		'aRichText' => array('tool' => 'Main'), 	
-		'aSlideshow' => array("width" => 720, "height" => 360, 'resizeType' => 'c', "constraints" => array("aspect-width" => 720, "aspect-height" => 360)),
+		// Spike put a fixed aspect ratio in here to demonstrate cropping features
+		'aSlideshow' => array("width" => 720, "height" => 360, 'resizeType' => 'c', "constraints" => array("minimum-width" => 720, "minimum-height" => 360, "aspect-width" => 2, "aspect-height" => 1)),
 		'aVideo' => array("width" => 720, "height" => 360, 'resizeType' => 'c'),
 		'aImage' => array("width" => 720, "height" => 360, 'resizeType' => 'c'),
 		'aButton' => array("width" => 720, "height" => 360, 'resizeType' => 'c'),
