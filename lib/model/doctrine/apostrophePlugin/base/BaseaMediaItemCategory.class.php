@@ -19,7 +19,7 @@
  * @method aMediaItemCategory setAMediaItem()        Sets the current record's "aMediaItem" value
  * @method aMediaItemCategory setAMediaCategory()    Sets the current record's "aMediaCategory" value
  * 
- * @package    content
+ * @package    asandbox
  * @subpackage model
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
