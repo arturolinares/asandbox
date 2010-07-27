@@ -1,3 +1,33 @@
+/* Optional Reset Style for use with the logged-out view */
+
+/* Eric Meyer's Reset CSS 
+-- http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+-------------------------------------------------------------------------- */
+
+* { margin: 0; padding: 0; font-weight: normal; } /* Safari seems to ignore a lot of the reset style sheet and I am not sure why. */
+
+html, body, div, span, applet, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
+abbr, acronym, address, big, cite, code, del, dfn, 
+em, font, img, ins, kbd, q, s, samp, small, strike, 
+strong, sub, sup, tt, var, b, u, i, center, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, 
+legend, table, caption, tbody, tfoot, thead, tr, th, td 
+{ 
+	margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; 
+}
+
+:focus { outline: 0; } /* remember to define focus styles! */
+
+ins { text-decoration: none; } /* remember to highlight inserts somehow! */
+del { text-decoration: line-through; }
+
+table { border-collapse: separate; border-spacing: 0; } /* tables still need 'cellspacing="0"' in the markup */
+
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+
+blockquote, q { quotes: "" ""; }
+
 /* aSandbox Default CSS */
 
 
@@ -167,6 +197,7 @@ width: 480px;
 	width: 100%;
 	clear: both;
 	margin: 20px 0;
+	padding: 0;
 }
 
 .a-nav-main .a-nav-item
@@ -210,6 +241,15 @@ width: 480px;
 .a-subnav-wrapper
 {
 	background: #ddd;
+	margin-bottom: 20px;
+}
+
+.a-nav-subnav
+{
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .a-nav-subnav .a-nav-item .a-drag
@@ -295,6 +335,8 @@ margin-bottom: 5px;
 	width: 100%;
 	font-size: 18px;
 	margin: 0 0 20px 0;
+	list-style: none;
+	padding: 0;
 }
 
 #a-breadcrumb-component li

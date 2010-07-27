@@ -10,7 +10,6 @@ default:
     #robots:       index, follow
 
   stylesheets:    
-    - reset.css: { position: first }
     - main.css: { position: last }
   
   javascripts:
