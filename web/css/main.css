@@ -601,4 +601,9 @@ background-position: 0 -30px !important;
 	background: rgba(0, 0, 0, 0.35);	
 }
 
-
+.a-btn,
+.a-form-row label,
+.a-admin fieldset h2
+{
+text-transform: capitalize;
+}
