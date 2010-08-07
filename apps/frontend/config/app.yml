@@ -127,9 +127,7 @@ all:
     #     - normal
     #     - useTitleAsButtonText
     
-    allowed_slot_variants:
-      
-    home_as_tab: false
+    # allowed_slot_variants:
 
     templates:
       home: Home Page
