@@ -37,5 +37,5 @@ Options +FollowSymLinks +ExecCGI
 # environments that don't have php_value (those environments can
 # still do it in php.ini if they have altered the default)
 <IfModule mod_php5.c>
-	php_value arg_separator.output '&'
+	php_value arg_separator.output "&"
 </IfModule>
