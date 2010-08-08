@@ -49,7 +49,10 @@ all:
     csrf_secret:            CHANGEME     # Unique secret to enable CSRF protection or false to disable
 
     # Output escaping settings
-    escaping_strategy:      false            # Determines how variables are made available to templates. Accepted values: on, off.
+    
+    # In 1.5 Apostrophe is compatible with the Symfony default escaping strategy
+    
+    escaping_strategy:      true            # Determines how variables are made available to templates. 
     escaping_method:        ESC_SPECIALCHARS # Function or helper used for escaping. Accepted values: ESC_RAW, ESC_ENTITIES, ESC_JS, ESC_JS_NO_ENTITIES, and ESC_SPECIALCHARS.
     #    # Activated modules from plugins or from the symfony core
     enabled_modules:        
