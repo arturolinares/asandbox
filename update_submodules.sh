@@ -46,4 +46,9 @@ git fetch origin
 git checkout master
 git pull origin master
 
-cd ..
+cd ../../lib/vendor/symfony
+git fetch origin
+git checkout master
+git pull origin master
+
+cd ../../../
