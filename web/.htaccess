@@ -1,4 +1,7 @@
 Options +FollowSymLinks +ExecCGI
+AddType text/javascript .jsgz
+AddType text/css .cssgz
+AddEncoding x-gzip .jsgz .cssgz
 
 <IfModule mod_rewrite.c>
   RewriteEngine On

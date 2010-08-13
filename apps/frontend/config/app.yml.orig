@@ -121,27 +121,6 @@ all:
     templates:
       home: Home Page
       default: Default Page
-
-    # Disables ALL of our bundled styles (quite a job to replace).
-    # See use_bundled_stylesheets for a more selective way to do it
-    
-    # use_bundled_stylesheet: false
-    
-    # Selectively disables some or all of our bundled styles.
-    # Everything you don't set to false loads by default
-    
-   ## Uncomment below to disable the styles for that section
-    # use_bundled_stylesheets:
-       # buttons: false
-       # utility: false
-       # forms: false
-       # navigation: false
-       # components: false
-       # area-slots: false
-       # engines: false
-       # admin: false
-       # colors: false
-      
     # We're using it as the sitewide layout instead (see view.yml)
     use_bundled_layout: false   
     engines:
@@ -198,19 +177,4 @@ all:
   
 #  cli:
 #    host: cmstest14
-
-
-# In the production environment, we minify CSS and JS by default.
-# We'd like to gzip them too, but a lot of people don't have the
-# zlib extension in PHP. We encourage you to turn that on and see.
-# If you don't have the zlib extension have your host/sysadmin fix that
-
-# TODO: right now I have both turned on to demonstrate what this branch
-# is all about, but a_minify_gzip needs turning off before this becomes
-# the mainstream sandbox. We should always turn it on again when creating
-# our own client sites
-
-prod:
-  a_minify: true
-  a_minify_gzip: true
-  
+    

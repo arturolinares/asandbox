@@ -1,61 +1,98 @@
-/* aSandbox Defaul CSS */
+/* We use Eric Meyer's reset stylesheet 100% of the time  =========================================== */
 
+/* Eric Meyer's Reset CSS -- http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+-------------------------------------------------------------------------- */
 
+* { margin: 0; padding: 0; font-weight: normal; } /* Safari seems to ignore a lot of the reset style sheet and I am not sure why. */
 
-
-/* Basic Elements =========================================== */
-
-h1
-{
-	font-size: 30px;
+html, body, div, span, applet, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
+abbr, acronym, address, big, cite, code, del, dfn, 
+em, font, img, ins, kbd, q, s, samp, small, strike, 
+strong, sub, sup, tt, var, b, u, i, center, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, 
+legend, table, caption, tbody, tfoot, thead, tr, th, td 
+{ 
+	margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; 
 }
 
-h2
+:focus { outline: 0; } /* remember to define focus styles! */
+
+ins { text-decoration: none; } /* remember to highlight inserts somehow! */
+del { text-decoration: line-through; }
+
+table { border-collapse: separate; border-spacing: 0; } /* tables still need 'cellspacing="0"' in the markup */
+
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+
+blockquote, q { quotes: "" ""; }
+
+/* Basic Elements
+-------------------------------------*/
+
+html, body { height: 100%; }
+
+body { font: 12px/1.4 arial, sans-serif; color: #333; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.2; }
+
+h1 { font-size: 225%; }
+h2 { font-size: 185%; }
+h3 { font-size: 160%; }
+h4 { font-size: 125%; }
+h5 { font-size: 110%; }
+h6 { font-size: 100%; }
+
+p { line-height: 1.4; }
+
+input[type="checkbox"],
+input[type="radio"]
 {
-	font-size: 24px;
-	margin: 0 0 10px 0;
+	width: auto !important;
+	border: none !important;
 }
 
-h3
+object { float: left; clear: both; }
+
+br.c { background: none; border: 0; clear: both; display: block; float: none; font-size: 0px; margin: 0; padding: 0; visibility: hidden; width: 0; height: 0; line-height: 0;}
+
+a { text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+
+/* Global Layout
+-------------------------------------*/
+
+#a-wrapper
 {
-	font-size: 18px;
-	color: #666;
+width: 960px;
+margin: 0 auto;
 }
-
-h4,
-h5,
-h6
-{
-	font-size: 14px;
-	color: #666;
-}
-
-br.c
-{
-	clear: both;
-	margin: 10px 0;
-}
-
-a
-{
-	text-decoration: none;
-}
-
-a:hover
-{
-	text-decoration: underline;
-}
-
-
-
-
-
-/* Basic Layout =========================================== */
 
 #a-header
 {
-	width: 540px;
+float: left;
+display: inline;
+position: relative;
+width: 540px;
+clear: none;
+}
+
+#a-content
+{
+	float: left;
+	position: relative;
+	display: inline;
 	clear: none;
+	width: 720px;
+}
+
+.a-area-footer
+{
+	position: relative;
+	display: inline;
+	clear: both;
 }
 
 #a-search
@@ -92,12 +129,22 @@ a:hover
 	width: 50%;
 }
 
+.a-default #a-content
+{
+clear: none;
+float: left;
+width: auto;
+}
+
+.a-default .a-area-body
+{
+width: 480px;
+}
+
 .a-area-body
 {
 	width:480px;
 	float:left;
-	display:inline;
-	position:relative;
 }
 
 .a-home .a-area-body
@@ -136,7 +183,8 @@ a:hover
 }
 
 
-/* Top Navigation =========================================== */
+/* Top Navigation
+-------------------------------------*/
 
 .a-nav-main
 {
@@ -145,6 +193,7 @@ a:hover
 	width: 100%;
 	clear: both;
 	margin: 20px 0;
+	padding: 0;
 }
 
 .a-nav-main .a-nav-item
@@ -183,11 +232,21 @@ a:hover
 }
 
 
-/* Subnav =========================================== */
+/* Subnavigation
+-------------------------------------*/
 
 .a-subnav-wrapper
 {
 	background: #ddd;
+	margin-bottom: 20px;
+}
+
+.a-nav-subnav
+{
+	overflow: hidden;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .a-nav-subnav .a-nav-item .a-drag
@@ -265,7 +324,9 @@ margin-bottom: 5px;
 	padding: 0 5px;
 }
 
-/* Breadcrumb Component =========================================== */
+
+/* Breadcrumb Navigation
+-------------------------------------*/
 
 #a-breadcrumb-component
 {
@@ -273,6 +334,8 @@ margin-bottom: 5px;
 	width: 100%;
 	font-size: 18px;
 	margin: 0 0 20px 0;
+	list-style: none;
+	padding: 0;
 }
 
 #a-breadcrumb-component li
@@ -281,244 +344,18 @@ margin-bottom: 5px;
 	margin-right: 5px;
 }
 
-/* Basic Blog Styles ====================================== */
-
-#a-blog-main,
-.a-blog-item,
-.a-blog-item-title,
-.a-blog-item-meta,
-.a-blog-item-tags,
-.a-blog-item-media,
-.a-blog-item-body,
-.a-blog-item-excerpt-container
-{
-	float: left;
-	clear: both;
-	display: inline;
-	position: relative;	
-	width: 100%;
-}
-
-.a-blog-main hr
-{
-	float: left;
-	width: 100%;
-	margin-bottom:10px;
-	height: 1px;
-	border: none;
-	background: rgba(0,0,0,0.125);
-}
-
-.a-blog-item .a-area
-{
-	margin-top:0;
-}
-
-.a-blog-item-title,
-.a-blog-item-meta,
-.a-blog-item-tags,
-.a-blog-item-media,
-.a-blog-item-body,
-.a-blog-item-excerpt
-{
-	margin-bottom: 10px;
-}
-
-.a-blog-item-excerpt-container
-{
-	margin-bottom:20px;
-}
-
-.a-blog-item-body p
-{
-	margin-bottom: 10px;
-}
-
-.a-blog-item-tags li
-{
-	float: left;
-	margin: 0 5px 0 0;
-}
-
-.a-blog-item-meta
-{
-	font-size: 11px;
-	color: #888;
-}
-
-.a-blog ul.a-slideshow-controls
-{
-	border:medium none;
-	display:inline;
-	float:left;
-	height:20px;
-	margin-right:1px;
-	position:absolute;
-	right:0;
-	top:-24px;
-	width:auto;
-}
-
-.addthis_toolbox
-{
-	float:left;
-	width: auto;
-	clear: both;
-	padding: 5px;
-	background: #fff;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;	
-}
-
-.aEvent .addthis_toolbox
-{
-	margin-left: 140px;
-	font-size: 11px;
-	color: #999;
-}
-
-.a-event-date-range span
-{
-	float: left;
-	width: 100%;
-	color: #222;
-}
-
-.a-event-date-range .end_date
-{
-	margin-top: 5px;
-}
-
-/* Blog Templates ====================================== */
-
-.post.singleColumnTemplate .a-blog-item-meta
-{
-	margin-top: -3px;
-}
-
-.post.singleColumnTemplate .a-blog-item-meta li
-{
-	float: left;
-	width: auto;
-	clear: none;
-	line-height: 1.2;
-}
-
-.post.singleColumnTemplate .a-blog-item-meta li.author
-{
-	margin-left: 5px;
-	padding-left: 5px;
-	border-left: 1px solid #ccc;
-}
-
-.post.singleColumnTemplate .a-area-blog-body
-{
-width: 680px;
-}
-
-.post.twoColumnTemplate .a-area-blog-sidebar
-{
-margin-left: 20px;
-width: 180px;
-}
-
-/*  Blog - Single Column - Default Page Body Slot */
 
 
-.post.singleColumnTemplate.inDefaultPageBody .a-area-blog-body
-{
-width: 480px;
-}
-
-.event.singleColumnTemplate.has-media .a-blog-item-media
-{
-	float: left;
-	clear: none;
-	width: 100px;
-}
-
-.event.singleColumnTemplate.has-media .a-blog-item-excerpt-container
-{
-	float: left;
-	clear: none;
-	width: 100%;
-}
-
-.event.singleColumnTemplate.has-media .a-blog-item-excerpt,
-.event.singleColumnTemplate.has-media .a-blog-read-more
-{
-	float: left;
-	clear: left;
-	margin-left: 140px;
-}
-
-/*  Blog - Two Column - Default Page Body Slot */
+/* Blog Templates
+-------------------------------------*/
 
 
-.post.twoColumnTemplate.inDefaultPageBody .a-area-blog-body
-{
-width: 300px;
-}
 
-.post.twoColumnTemplate.inDefaultPageBody .a-area-blog-sidebar
-{
-margin-left: 20px;
-width: 160px;
-}
-
-/* Event Templates =========================================== */
+/* 4. Variants
+-------------------------------------*/
 
 
-/*  Event - Single Column */
-
-.event.singleColumnTemplate .a-area-blog-body
-{
-width: 580px;
-}
-
-.a-blog .event.singleColumnTemplate .a-area-blog-body 
-{
-float: right;
-}
-
-.a-blog .event.singleColumnTemplate .a-blog-item-title
-{
-	float: right;
-	margin-left: -120px;
-	width: 580px;
-}
-
-/*  Event - *** Single Column styles scoped to the sidebar without a template override */
-
-.a-area-sidebar .event.singleColumnTemplate .a-blog-item-meta,
-.event.singleColumnTemplate .a-blog-item-meta
-{
-	float: left;
-	width: auto;
-	clear: none;
-	width: 120px;
-	margin-right: 20px;
-}
-
-.a-area-sidebar .event.singleColumnTemplate .a-blog-item-meta
-{
-	width: 35%;
-	margin-right: 5%;
-}
-
-.a-area-sidebar .event.singleColumnTemplate .a-blog-item-title,
-.a-area-sidebar .event.singleColumnTemplate .a-blog-item-media,
-.a-area-sidebar .event.singleColumnTemplate .a-blog-item-excerpt-container
-{
-	width: 60%;
-	clear: right;
-	float: right;
-}
-/* Variants =========================================== */
-
-
-/* aSlideshow Slot Bundled Variant Style - Compact */
+/* aSlideshow Compact Variant */
 
 .a-slot.aSlideshow.compact
 {
@@ -584,6 +421,9 @@ background-position: 0 -30px !important;
 	float: left;
 	padding: 8px 70px 8px 8px;	
 }
+
+
+/* aSlideshow Autoplay Variant */
 
 
 .a-slot.aSlideshow.autoplay .a-slideshow-title

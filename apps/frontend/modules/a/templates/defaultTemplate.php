@@ -15,8 +15,8 @@
 <?php // By default (no options) blog posts and events display nice little excerpts you can click on to see more ?>
 <?php $blogOptions = array('slideshowOptions' => array('width' => 480, 'height' => 320,  )) ?>
 <?php $eventOptions = array('slideshowOptions' => array('width' => 340, 'height' => 220,  )) ?>
-<?php $blogCompactOptions = array('excerptLength' => 40, 'slideshowOptions' => array('width' => 200, 'height' => 130,  ))  ?>
-<?php $eventCompactOptions = array('excerptLength' => 40, 'slideshowOptions' => array('width' => 120, )) ?>
+<?php $blogCompactOptions = array('excerptLength' => 40, 'slideshowOptions' => array('width' => 200, 'height' => 130, 'resizeType' => 'c'))  ?>
+<?php $eventCompactOptions = array('excerptLength' => 40, 'slideshowOptions' => array('width' => 200, 'flexHeight' => true,  )) ?>
 
 <?php // You can use a custom subtemplate to display blog posts and events differently. ?>
 <?php // With tis setting we render _singleColumnTemplate_inDefaultPageBody.php, etc. (the blog post template ?>
@@ -95,8 +95,8 @@
 		'aFeed' => array(),		
 		'aButton' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
 		'aPDF' => array('width' => 200, 'flexHeight' => true, 'resizeType' => 's'),
-		'aEvents' => $eventCompactOptions,
 		'aEvent' => $eventCompactOptions,
 		'aBlog' => $blogCompactOptions,
+		'aEventSingle' => $eventCompactOptions,
 		'aBlogSingle' => $blogCompactOptions
 	))) ?>
