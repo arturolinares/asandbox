@@ -211,6 +211,7 @@ all:
 # our own client sites
 
 prod:
-  a_minify: true
-  a_minify_gzip: true
+  a:
+    minify: true
+    minify_gzip: true
   
