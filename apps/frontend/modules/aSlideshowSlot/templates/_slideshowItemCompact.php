@@ -1,4 +1,7 @@
 <?php use_helper('I18N') ?>
+<?php $options = $sf_data->getRaw('options') ?>
+<?php $embed = $sf_data->getRaw('embed') ?>
+<?php $item = $sf_data->getRaw('item') ?>
 <ul>
   <li class="a-slideshow-image" style="height:<?php echo $options['height'] ?>;<?php echo ($n==0)? 'display:block':'' ?>"><?php echo $embed ?></li>
   <?php if ($options['title']): ?>
