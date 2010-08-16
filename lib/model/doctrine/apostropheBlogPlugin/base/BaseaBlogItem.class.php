@@ -16,8 +16,10 @@
  * @property string $template
  * @property timestamp $published_at
  * @property string $type
- * @property timestamp $start_date
- * @property timestamp $end_date
+ * @property date $start_date
+ * @property time $start_time
+ * @property date $end_date
+ * @property time $end_time
  * @property sfGuardUser $Author
  * @property Doctrine_Collection $Editors
  * @property aPage $Page
@@ -36,8 +38,10 @@
  * @method string              getTemplate()           Returns the current record's "template" value
  * @method timestamp           getPublishedAt()        Returns the current record's "published_at" value
  * @method string              getType()               Returns the current record's "type" value
- * @method timestamp           getStartDate()          Returns the current record's "start_date" value
- * @method timestamp           getEndDate()            Returns the current record's "end_date" value
+ * @method date                getStartDate()          Returns the current record's "start_date" value
+ * @method time                getStartTime()          Returns the current record's "start_time" value
+ * @method date                getEndDate()            Returns the current record's "end_date" value
+ * @method time                getEndTime()            Returns the current record's "end_time" value
  * @method sfGuardUser         getAuthor()             Returns the current record's "Author" value
  * @method Doctrine_Collection getEditors()            Returns the current record's "Editors" collection
  * @method aPage               getPage()               Returns the current record's "Page" value
@@ -56,7 +60,9 @@
  * @method aBlogItem           setPublishedAt()        Sets the current record's "published_at" value
  * @method aBlogItem           setType()               Sets the current record's "type" value
  * @method aBlogItem           setStartDate()          Sets the current record's "start_date" value
+ * @method aBlogItem           setStartTime()          Sets the current record's "start_time" value
  * @method aBlogItem           setEndDate()            Sets the current record's "end_date" value
+ * @method aBlogItem           setEndTime()            Sets the current record's "end_time" value
  * @method aBlogItem           setAuthor()             Sets the current record's "Author" value
  * @method aBlogItem           setEditors()            Sets the current record's "Editors" collection
  * @method aBlogItem           setPage()               Sets the current record's "Page" value
@@ -128,11 +134,17 @@ abstract class BaseaBlogItem extends sfDoctrineRecord
              'type' => 'string',
              'length' => 255,
              ));
-        $this->hasColumn('start_date', 'timestamp', null, array(
-             'type' => 'timestamp',
+        $this->hasColumn('start_date', 'date', null, array(
+             'type' => 'date',
              ));
-        $this->hasColumn('end_date', 'timestamp', null, array(
-             'type' => 'timestamp',
+        $this->hasColumn('start_time', 'time', null, array(
+             'type' => 'time',
+             ));
+        $this->hasColumn('end_date', 'date', null, array(
+             'type' => 'date',
+             ));
+        $this->hasColumn('end_time', 'time', null, array(
+             'type' => 'time',
              ));
 
         $this->option('type', 'INNODB');
