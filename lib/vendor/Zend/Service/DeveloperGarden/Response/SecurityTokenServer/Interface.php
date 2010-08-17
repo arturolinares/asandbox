@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Zend Framework
  *
@@ -13,34 +14,27 @@
  * to license@zend.com so we can send you a copy immediately.
  *
  * @category   Zend
- * @package    Zend_Ldap
- * @copyright  Copyright (c) 2005-2008 Zend Technologies USA Inc. (http://www.zend.com)
+ * @package    Zend_Service
+ * @subpackage DeveloperGarden
+ * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Interface.php 17826 2009-08-26 15:01:34Z sgehrig $
+ * @version    $Id: Interface.php 20166 2010-01-09 19:00:17Z bkarwin $
  */
 
 /**
- * Zend_Ldap_Collection_Iterator_Interface provides a contract for
- * adapter specific collection iterators
- *
  * @category   Zend
- * @package    Zend_Ldap
- * @copyright  Copyright (c) 2005-2008 Zend Technologies USA Inc. (http://www.zend.com)
+ * @package    Zend_Service
+ * @subpackage DeveloperGarden
+ * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
+ * @author     Marco Kaiser
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
-interface Zend_Ldap_Collection_Iterator_Interface extends Iterator, Countable
+interface Zend_Service_DeveloperGarden_Response_SecurityTokenServer_Interface
 {
     /**
-     * Closes the current result set
+     * returns true if the stored token data is valid
      *
      * @return boolean
      */
-    public function close();
-
-    /**
-     * Gets the current LDAP connection.
-     *
-     * @return Zend_Ldap
-     */
-    public function getLdap();
+    public function isValid();
 }

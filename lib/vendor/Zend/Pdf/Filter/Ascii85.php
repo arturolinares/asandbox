@@ -14,9 +14,9 @@
  *
  * @category   Zend
  * @package    Zend_Pdf
- * @copyright  Copyright (c) 2005-2009 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id: Ascii85.php 19747 2009-12-18 16:05:13Z alexander $
+ * @version    $Id: Ascii85.php 22655 2010-07-22 18:47:20Z mabe $
  */
 
 
@@ -27,7 +27,7 @@ require_once 'Zend/Pdf/Filter/Interface.php';
  * ASCII85 stream filter
  *
  * @package    Zend_Pdf
- * @copyright  Copyright (c) 2005-2009 Zend Technologies USA Inc. (http://www.zend.com)
+ * @copyright  Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class Zend_Pdf_Filter_Ascii85 implements Zend_Pdf_Filter_Interface
@@ -78,7 +78,7 @@ class Zend_Pdf_Filter_Ascii85 implements Zend_Pdf_Filter_Interface
 
             //0 pad the rest
             for ($j = $n;$j < 4;$j++) {
-                $chunk .= chr(0);
+                $chunk .= "\0";
             }
 
             $b = unpack("N", $chunk);
@@ -134,7 +134,7 @@ class Zend_Pdf_Filter_Ascii85 implements Zend_Pdf_Filter_Interface
             if (substr($data, $i, 1) == "z") {
                 $i -= 4;
                 $output .= pack("N", 0);
-                next;
+                continue;
             }
 
             $c = substr($data, $i, 5);
