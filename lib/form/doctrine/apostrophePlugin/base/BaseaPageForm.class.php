@@ -5,7 +5,7 @@
  *
  * @method aPage getObject() Returns the current form's model object
  *
- * @package    asandbox
+ * @package    symfony
  * @subpackage form
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
@@ -29,8 +29,8 @@ abstract class BaseaPageForm extends BaseFormDoctrine
       'lft'                   => new sfWidgetFormInputText(),
       'rgt'                   => new sfWidgetFormInputText(),
       'level'                 => new sfWidgetFormInputText(),
-      'blog_categories_list'  => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory')),
       'media_categories_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aMediaCategory')),
+      'blog_categories_list'  => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory')),
     ));
 
     $this->setValidators(array(
@@ -48,8 +48,8 @@ abstract class BaseaPageForm extends BaseFormDoctrine
       'lft'                   => new sfValidatorInteger(array('required' => false)),
       'rgt'                   => new sfValidatorInteger(array('required' => false)),
       'level'                 => new sfValidatorInteger(array('required' => false)),
-      'blog_categories_list'  => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory', 'required' => false)),
       'media_categories_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aMediaCategory', 'required' => false)),
+      'blog_categories_list'  => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('a_page[%s]');
@@ -70,62 +70,24 @@ abstract class BaseaPageForm extends BaseFormDoctrine
   {
     parent::updateDefaultsFromObject();
 
-    if (isset($this->widgetSchema['blog_categories_list']))
-    {
-      $this->setDefault('blog_categories_list', $this->object->BlogCategories->getPrimaryKeys());
-    }
-
     if (isset($this->widgetSchema['media_categories_list']))
     {
       $this->setDefault('media_categories_list', $this->object->MediaCategories->getPrimaryKeys());
+    }
+
+    if (isset($this->widgetSchema['blog_categories_list']))
+    {
+      $this->setDefault('blog_categories_list', $this->object->BlogCategories->getPrimaryKeys());
     }
 
   }
 
   protected function doSave($con = null)
   {
-    $this->saveBlogCategoriesList($con);
     $this->saveMediaCategoriesList($con);
+    $this->saveBlogCategoriesList($con);
 
     parent::doSave($con);
-  }
-
-  public function saveBlogCategoriesList($con = null)
-  {
-    if (!$this->isValid())
-    {
-      throw $this->getErrorSchema();
-    }
-
-    if (!isset($this->widgetSchema['blog_categories_list']))
-    {
-      // somebody has unset this widget
-      return;
-    }
-
-    if (null === $con)
-    {
-      $con = $this->getConnection();
-    }
-
-    $existing = $this->object->BlogCategories->getPrimaryKeys();
-    $values = $this->getValue('blog_categories_list');
-    if (!is_array($values))
-    {
-      $values = array();
-    }
-
-    $unlink = array_diff($existing, $values);
-    if (count($unlink))
-    {
-      $this->object->unlink('BlogCategories', array_values($unlink));
-    }
-
-    $link = array_diff($values, $existing);
-    if (count($link))
-    {
-      $this->object->link('BlogCategories', array_values($link));
-    }
   }
 
   public function saveMediaCategoriesList($con = null)
@@ -163,6 +125,44 @@ abstract class BaseaPageForm extends BaseFormDoctrine
     if (count($link))
     {
       $this->object->link('MediaCategories', array_values($link));
+    }
+  }
+
+  public function saveBlogCategoriesList($con = null)
+  {
+    if (!$this->isValid())
+    {
+      throw $this->getErrorSchema();
+    }
+
+    if (!isset($this->widgetSchema['blog_categories_list']))
+    {
+      // somebody has unset this widget
+      return;
+    }
+
+    if (null === $con)
+    {
+      $con = $this->getConnection();
+    }
+
+    $existing = $this->object->BlogCategories->getPrimaryKeys();
+    $values = $this->getValue('blog_categories_list');
+    if (!is_array($values))
+    {
+      $values = array();
+    }
+
+    $unlink = array_diff($existing, $values);
+    if (count($unlink))
+    {
+      $this->object->unlink('BlogCategories', array_values($unlink));
+    }
+
+    $link = array_diff($values, $existing);
+    if (count($link))
+    {
+      $this->object->link('BlogCategories', array_values($link));
     }
   }
 

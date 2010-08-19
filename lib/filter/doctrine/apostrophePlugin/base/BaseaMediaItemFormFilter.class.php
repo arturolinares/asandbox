@@ -3,7 +3,7 @@
 /**
  * aMediaItem filter form base class.
  *
- * @package    asandbox
+ * @package    symfony
  * @subpackage filter
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormFilterGeneratedTemplate.php 29570 2010-05-21 14:49:47Z Kris.Wallsmith $
@@ -13,7 +13,6 @@ abstract class BaseaMediaItemFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'lucene_dirty'          => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'type'                  => new sfWidgetFormChoice(array('choices' => array('' => '', 'image' => 'image', 'video' => 'video', 'audio' => 'audio', 'pdf' => 'pdf'))),
       'service_url'           => new sfWidgetFormFilterInput(),
       'format'                => new sfWidgetFormFilterInput(),
@@ -33,7 +32,6 @@ abstract class BaseaMediaItemFormFilter extends BaseFormFilterDoctrine
     ));
 
     $this->setValidators(array(
-      'lucene_dirty'          => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
       'type'                  => new sfValidatorChoice(array('required' => false, 'choices' => array('image' => 'image', 'video' => 'video', 'audio' => 'audio', 'pdf' => 'pdf'))),
       'service_url'           => new sfValidatorPass(array('required' => false)),
       'format'                => new sfValidatorPass(array('required' => false)),
@@ -106,7 +104,6 @@ abstract class BaseaMediaItemFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'                    => 'Number',
-      'lucene_dirty'          => 'Boolean',
       'type'                  => 'Enum',
       'service_url'           => 'Text',
       'format'                => 'Text',

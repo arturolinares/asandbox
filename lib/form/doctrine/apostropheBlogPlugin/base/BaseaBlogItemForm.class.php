@@ -5,7 +5,7 @@
  *
  * @method aBlogItem getObject() Returns the current form's model object
  *
- * @package    asandbox
+ * @package    symfony
  * @subpackage form
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
@@ -26,10 +26,8 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
       'template'        => new sfWidgetFormInputText(),
       'published_at'    => new sfWidgetFormDateTime(),
       'type'            => new sfWidgetFormInputText(),
-      'start_date'      => new sfWidgetFormDate(),
-      'start_time'      => new sfWidgetFormTime(),
-      'end_date'        => new sfWidgetFormDate(),
-      'end_time'        => new sfWidgetFormTime(),
+      'start_date'      => new sfWidgetFormDateTime(),
+      'end_date'        => new sfWidgetFormDateTime(),
       'created_at'      => new sfWidgetFormDateTime(),
       'updated_at'      => new sfWidgetFormDateTime(),
       'slug'            => new sfWidgetFormInputText(),
@@ -49,10 +47,8 @@ abstract class BaseaBlogItemForm extends BaseFormDoctrine
       'template'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'published_at'    => new sfValidatorDateTime(array('required' => false)),
       'type'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'start_date'      => new sfValidatorDate(array('required' => false)),
-      'start_time'      => new sfValidatorTime(array('required' => false)),
-      'end_date'        => new sfValidatorDate(array('required' => false)),
-      'end_time'        => new sfValidatorTime(array('required' => false)),
+      'start_date'      => new sfValidatorDateTime(array('required' => false)),
+      'end_date'        => new sfValidatorDateTime(array('required' => false)),
       'created_at'      => new sfValidatorDateTime(),
       'updated_at'      => new sfValidatorDateTime(),
       'slug'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),

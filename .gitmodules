@@ -1,0 +1,30 @@
+[submodule "plugins/sfJqueryReloadedPlugin"]
+	path = plugins/sfJqueryReloadedPlugin
+	url = git://github.com/annismckenzie/sfJqueryReloadedPlugin.git
+[submodule "plugins/sfDoctrineGuardPlugin"]
+	path = plugins/sfDoctrineGuardPlugin
+	url = git://github.com/annismckenzie/sfDoctrineGuardPlugin.git
+[submodule "plugins/sfDoctrineActAsTaggablePlugin"]
+	path = plugins/sfDoctrineActAsTaggablePlugin
+	url = git://github.com/annismckenzie/sfDoctrineActAsTaggablePlugin.git
+[submodule "plugins/sfSyncContentPlugin"]
+	path = plugins/sfSyncContentPlugin
+	url = git://github.com/annismckenzie/sfSyncContentPlugin.git
+[submodule "plugins/sfTaskExtraPlugin"]
+	path = plugins/sfTaskExtraPlugin
+	url = git://github.com/annismckenzie/sfTaskExtraPlugin.git
+[submodule "plugins/apostrophePlugin"]
+	path = plugins/apostrophePlugin
+	url = git://github.com/annismckenzie/apostrophePlugin.git
+[submodule "plugins/apostropheBlogPlugin"]
+	path = plugins/apostropheBlogPlugin
+	url = git://github.com/annismckenzie/apostropheBlogPlugin.git
+[submodule "plugins/sfFeed2Plugin"]
+	path = plugins/sfFeed2Plugin
+	url = git://github.com/annismckenzie/sfFeed2Plugin.git
+[submodule "plugins/sfWebBrowserPlugin"]
+	path = plugins/sfWebBrowserPlugin
+	url = git://github.com/annismckenzie/sfWebBrowserPlugin.git
+[submodule "lib/vendor/symfony"]
+	path = lib/vendor/symfony
+	url = git://github.com/vjousse/symfony-1.4.git

@@ -3,7 +3,7 @@
 /**
  * aPage filter form base class.
  *
- * @package    asandbox
+ * @package    symfony
  * @subpackage filter
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormFilterGeneratedTemplate.php 29570 2010-05-21 14:49:47Z Kris.Wallsmith $
@@ -26,8 +26,8 @@ abstract class BaseaPageFormFilter extends BaseFormFilterDoctrine
       'lft'                   => new sfWidgetFormFilterInput(),
       'rgt'                   => new sfWidgetFormFilterInput(),
       'level'                 => new sfWidgetFormFilterInput(),
-      'blog_categories_list'  => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory')),
       'media_categories_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aMediaCategory')),
+      'blog_categories_list'  => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory')),
     ));
 
     $this->setValidators(array(
@@ -44,8 +44,8 @@ abstract class BaseaPageFormFilter extends BaseFormFilterDoctrine
       'lft'                   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'rgt'                   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'level'                 => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'blog_categories_list'  => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory', 'required' => false)),
       'media_categories_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aMediaCategory', 'required' => false)),
+      'blog_categories_list'  => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'aBlogCategory', 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('a_page_filters[%s]');
@@ -55,24 +55,6 @@ abstract class BaseaPageFormFilter extends BaseFormFilterDoctrine
     $this->setupInheritance();
 
     parent::setup();
-  }
-
-  public function addBlogCategoriesListColumnQuery(Doctrine_Query $query, $field, $values)
-  {
-    if (!is_array($values))
-    {
-      $values = array($values);
-    }
-
-    if (!count($values))
-    {
-      return;
-    }
-
-    $query
-      ->leftJoin($query->getRootAlias().'.aBlogPageCategory aBlogPageCategory')
-      ->andWhereIn('aBlogPageCategory.blog_category_id', $values)
-    ;
   }
 
   public function addMediaCategoriesListColumnQuery(Doctrine_Query $query, $field, $values)
@@ -90,6 +72,24 @@ abstract class BaseaPageFormFilter extends BaseFormFilterDoctrine
     $query
       ->leftJoin($query->getRootAlias().'.aMediaPageCategory aMediaPageCategory')
       ->andWhereIn('aMediaPageCategory.media_category_id', $values)
+    ;
+  }
+
+  public function addBlogCategoriesListColumnQuery(Doctrine_Query $query, $field, $values)
+  {
+    if (!is_array($values))
+    {
+      $values = array($values);
+    }
+
+    if (!count($values))
+    {
+      return;
+    }
+
+    $query
+      ->leftJoin($query->getRootAlias().'.aBlogPageCategory aBlogPageCategory')
+      ->andWhereIn('aBlogPageCategory.blog_category_id', $values)
     ;
   }
 
@@ -115,8 +115,8 @@ abstract class BaseaPageFormFilter extends BaseFormFilterDoctrine
       'lft'                   => 'Number',
       'rgt'                   => 'Number',
       'level'                 => 'Number',
-      'blog_categories_list'  => 'ManyKey',
       'media_categories_list' => 'ManyKey',
+      'blog_categories_list'  => 'ManyKey',
     );
   }
 }

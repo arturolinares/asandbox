@@ -21,9 +21,25 @@ legend, table, caption, tbody, tfoot, thead, tr, th, td
 ins { text-decoration: none; } /* remember to highlight inserts somehow! */
 del { text-decoration: line-through; }
 
-table { border-collapse: separate; border-spacing: 0; } /* tables still need 'cellspacing="0"' in the markup */
+h2
+{
+	font-size: 24px;
+	margin: 0 0 10px 0;
+}
 
-blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+h3
+{
+	font-size: 18px;
+	color: #666;
+}
+
+h4,
+h5,
+h6
+{
+	font-size: 14px;
+	color: #666;
+}
 
 blockquote, q { quotes: "" ""; }
 
@@ -345,14 +361,235 @@ margin-bottom: 5px;
 }
 
 
+/* Basic Blog Styles ====================================== */
 
-/* Blog Templates
--------------------------------------*/
+#a-blog-main,
+.a-blog-item,
+.a-blog-item-title,
+.a-blog-item-meta,
+.a-blog-item-tags,
+.a-blog-item-media,
+.a-blog-item-body,
+.a-blog-item-excerpt-container
+{
+	float: left;
+	clear: both;
+	display: inline;
+	position: relative;	
+	width: 100%;
+}
+
+.a-blog-main hr
+{
+	float: left;
+	width: 100%;
+	margin-bottom:10px;
+	height: 1px;
+	border: none;
+	background: rgba(0,0,0,0.125);
+}
+
+.a-blog-item .a-area
+{
+	margin-top:0;
+}
+
+.a-blog-item-title,
+.a-blog-item-meta,
+.a-blog-item-tags,
+.a-blog-item-media,
+.a-blog-item-body,
+.a-blog-item-excerpt
+{
+	margin-bottom: 10px;
+}
+
+.a-blog-item-excerpt-container
+{
+	margin-bottom:20px;
+}
+
+.a-blog-item-body p
+{
+	margin-bottom: 10px;
+}
+
+.a-blog-item-meta
+{
+	font-size: 11px;
+	color: #888;
+}
+
+.a-blog ul.a-slideshow-controls
+{
+	border:medium none;
+	display:inline;
+	float:left;
+	height:20px;
+	margin-right:1px;
+	position:absolute;
+	right:0;
+	top:-24px;
+	width:auto;
+}
+
+.addthis_toolbox
+{
+	float:left;
+	width: auto;
+	clear: both;
+	padding: 5px;
+	background: #fff;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;	
+}
+
+.aEvent .addthis_toolbox
+{
+	margin-left: 140px;
+	font-size: 11px;
+	color: #999;
+}
+
+.a-event-date-range span
+{
+	float: left;
+	width: 100%;
+	color: #222;
+}
+
+.a-event-date-range .end_date
+{
+	margin-top: 5px;
+}
+
+/* Blog Templates ====================================== */
+
+.post.singleColumnTemplate .a-blog-item-meta
+{
+	margin-top: -3px;
+}
+
+.post.singleColumnTemplate .a-blog-item-meta li
+{
+	float: left;
+	width: auto;
+	clear: none;
+	line-height: 1.2;
+}
+
+.post.singleColumnTemplate .a-blog-item-meta li.author
+{
+	margin-left: 5px;
+	padding-left: 5px;
+	border-left: 1px solid #ccc;
+}
+
+.post.singleColumnTemplate .a-area-blog-body
+{
+width: 680px;
+}
+
+.post.twoColumnTemplate .a-area-blog-sidebar
+{
+margin-left: 20px;
+width: 180px;
+}
+
+/*  Blog - Single Column - Default Page Body Slot */
 
 
+.post.singleColumnTemplate.inDefaultPageBody .a-area-blog-body
+{
+width: 480px;
+}
 
-/* 4. Variants
--------------------------------------*/
+.event.singleColumnTemplate.has-media .a-blog-item-media
+{
+	float: left;
+	clear: none;
+	width: 100px;
+}
+
+.event.singleColumnTemplate.has-media .a-blog-item-excerpt-container
+{
+	float: left;
+	clear: none;
+	width: 100%;
+}
+
+.event.singleColumnTemplate.has-media .a-blog-item-excerpt,
+.event.singleColumnTemplate.has-media .a-blog-read-more
+{
+	float: left;
+	clear: left;
+	margin-left: 140px;
+}
+
+/*  Blog - Two Column - Default Page Body Slot */
+
+
+.post.twoColumnTemplate.inDefaultPageBody .a-area-blog-body
+{
+width: 300px;
+}
+
+.post.twoColumnTemplate.inDefaultPageBody .a-area-blog-sidebar
+{
+margin-left: 20px;
+width: 160px;
+}
+
+/* Event Templates =========================================== */
+
+
+/*  Event - Single Column */
+
+.event.singleColumnTemplate .a-area-blog-body
+{
+width: 580px;
+}
+
+.a-blog .event.singleColumnTemplate .a-area-blog-body 
+{
+float: right;
+}
+
+.a-blog .event.singleColumnTemplate .a-blog-item-title
+{
+	float: right;
+	margin-left: -120px;
+	width: 580px;
+}
+
+/*  Event - *** Single Column styles scoped to the sidebar without a template override */
+
+.a-area-sidebar .event.singleColumnTemplate .a-blog-item-meta,
+.event.singleColumnTemplate .a-blog-item-meta
+{
+	float: left;
+	width: auto;
+	clear: none;
+	width: 120px;
+	margin-right: 20px;
+}
+
+.a-area-sidebar .event.singleColumnTemplate .a-blog-item-meta
+{
+	width: 35%;
+	margin-right: 5%;
+}
+
+.a-area-sidebar .event.singleColumnTemplate .a-blog-item-title,
+.a-area-sidebar .event.singleColumnTemplate .a-blog-item-media,
+.a-area-sidebar .event.singleColumnTemplate .a-blog-item-excerpt-container
+{
+	width: 60%;
+	clear: right;
+	float: right;
+}
+/* Variants =========================================== */
 
 
 /* aSlideshow Compact Variant */
@@ -440,6 +677,7 @@ background-position: 0 -30px !important;
 	background: rgb(0,0,0);	
 	background: rgba(0, 0, 0, 0.35);	
 }
+
 
 .a-btn,
 .a-form-row label,

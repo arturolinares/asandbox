@@ -114,9 +114,20 @@ all:
             interval: 4
             title: true
             arrows: false         
-            itemTemplate: slideshowItemCompact            
-            
-    home_as_tab: false
+            itemTemplate: slideshowItemCompact
+    
+    # By leaving this option empty, we forbid the use of slot variants without an
+    # explicit allowed_variants setting in a particular a_slot or a_area call.
+    # You can comment out this line to allow all variants for a slot to be used
+    # by default where allowed_variants is not specified. You can also provide a
+    # list of allowed variants here for each slot type:
+    #
+    # allowed_slot_variants:
+    #   aButton:
+    #     - normal
+    #     - useTitleAsButtonText
+    
+    # allowed_slot_variants:
 
     templates:
       home: Home Page
@@ -163,14 +174,14 @@ all:
     apipublic: false
     admin_credential: media_admin
     upload_credential: media_upload
-    use_bundled_layout: false
+    use_bundled_layout: false    
     embed_codes: true        
     
   aToolkit:
     indexes:
       - 'aPage'
       - 'aMediaItem'
-        
+      
   # options for sfSyncContentPlugin, used to sync the database and also
   # data files such as the media plugin's images and the search indexes. 
   # You can extend this if you have more data file folders
@@ -214,4 +225,3 @@ prod:
   a:
     minify: true
     minify_gzip: true
-  
